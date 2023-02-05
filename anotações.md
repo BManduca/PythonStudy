@@ -73,10 +73,73 @@ O Python
         - Uma fundação sem fins lucrativos, que mantém e coordena o python
         - Atualmente a linguagem evolui de acordo com a comunidade
       - Patrocinadores: Microsoft, Google e a Globo.com
+        - A própria Globo.com utiliza python em seus principais serviços, 
+        principalmente em seus sites e transmissões de vídeos.
         - ambas utilizam python em seus serviços, principalmente no site e 
         transmissão de vídeos
     - Atualmente a linguagem evoluiu tanto que ela hoje, é uma das linguagens 
     padrões que já vem instaladas em um monte de OS.
 
-    tempo: 06:47
-    https://www.youtube.com/watch?v=Mp0vhMDI7fA
+      - Um dos projetos que já tem referência diretamente, até mesmo no seu próprio
+      nome, identificando que utiliza a linguagem python, é o RaspberryPi
+      - Ele vem com a possibilidade de rodar um sistema operacional
+      - Sua principal forma de programação e educação é a linguagem Python
+      - Uma máquina utilizada para meios educacionais 
+
+
+    - Aonde está Guido Von Hossum?
+      - Ele ainda coordena a criação da linguagem python?
+      - Participou ativamente da construção da versão 3 do python
+      - 2005 se tornou funcionário da google, a trabalhar e aplicar
+      o python em uma série de projetos pessoais e dentro do google.
+      - 2013 saiu da google e foi para a Dropbox
+  
+
+    - Python é uma linguagem de propósito geral
+      - Não é uma linguagem focada em determinada coisa
+      - basicamente você pode utilizar a linguagem para tudo
+      - Não quer dizer que python é a melhor linguagem de se utilizar.
+      - Fácil, simples e intuitivo.
+      - Multiplataforma
+      - Batteries included (vem com a essência já atualizada e instalada)
+      - Livre
+      - Linguagem organizada
+      - Linguagem orientada a objetos
+        - tudo dentro do python é um objeto
+      - Muitas bibliotecas
+        - biblioteca para app de celular, biblioteca para criação de jogos,
+      biblioteca para criar tela de sistemas..
+      - Python tem sua filosofia própria, que foi criada por um dos
+      programadores da linguagem -> Tim Petters
+        - Zen of Python
+        - 
+
+
+    - Aonde o python é aplicado?
+      - basicamente em todos os lugares
+  
+    - Python tem algumas especificidades que a tornam muito poderosa
+      - Python suporta números muito grandes
+        - é preciso fazer cálculos muito grandes 
+        - isso ajuda muito na evolução de sistemas de IA
+          - Biotecnologia
+        - Computação 3D
+
+
+    - Quem usa python?
+      - Zope
+        - Gerenciador de conteúdo, feito totalmente em python
+      - Django
+        - Framework para criação de conteúdo
+                    
+      
+      - Games com python
+        - Freats on fire
+        - Jewel quest
+        - Eve online
+        - Civilization IV
+        - Battlefield 2
+
+
+    - NÃO PULAR ETAPAS!!!
+
