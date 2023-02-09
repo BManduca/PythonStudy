@@ -143,3 +143,33 @@ O Python
 
     - NÃO PULAR ETAPAS!!!
 
+
+- Como o python funciona?
+  - verificando versão -> python --version
+  - abrir interpretador -> escrever python no terminal
+  - python.org
+  - import this -> acessando o Python Zen (Zen of Python)
+
+  - Atualizar versão MacOS -> acessar o site, baixar a versão atualizada em 'Downloads' e abrir o pacote baixado.
+    - O Pacote vem com interpretador, Idle(ambiente), vem com as 'baterias' incluidas, ou seja, as bibliotecas padrões instaladas
+
+  - Install linux
+    - sudo apt-get install python3.6
+
+
+
+- Primeiros comandos em Python3
+  - todos os comandos são funções
+  - toda função tem que ter parênteses
+  - função para instruir a escrever algo em tela -> print()
+  - para realizar uma soma e mostrar em tela, precisa necessariamente da função print e da informação,
+  por exemplo 7 + 4, resultando na seguinte expressão -> print(7+4)
+  - Função para interagir com o usuário na inserção de dados -> input
+    - nome = input('Qual é o seu nome?')
+    - idade = input('Qual a sua idades?)
+    - peso = input('Quanto você pesa?)
+
+    - print('Nome: ' + nome, ' | ' , 'Idade: ' ,idade, ' | ' , 'Peso: ' ,peso)
+
+https://www.youtube.com/watch?v=31llNGKWDdo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0&index=5
+15:51
