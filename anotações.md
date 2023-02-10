@@ -165,11 +165,27 @@ O Python
   - para realizar uma soma e mostrar em tela, precisa necessariamente da função print e da informação,
   por exemplo 7 + 4, resultando na seguinte expressão -> print(7+4)
   - Função para interagir com o usuário na inserção de dados -> input
-    - nome = input('Qual é o seu nome?')
+    - nome = input('Qual é o seu nome?') 
     - idade = input('Qual a sua idades?)
     - peso = input('Quanto você pesa?)
 
     - print('Nome: ' + nome, ' | ' , 'Idade: ' ,idade, ' | ' , 'Peso: ' ,peso)
 
-https://www.youtube.com/watch?v=31llNGKWDdo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0&index=5
-15:51
+https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0&index=6
+5 minutos
+
+- Instalando PyCharm no MacOS
+  - Acessar https://www.jetbrains.com/pt-br/pycharm/download/#section=mac
+  - Baixar arquivo .dmg versão community
+  - e fazer processo de instalação
+
+- Instalando PyCharm no Linux
+  - acessar https://www.jetbrains.com/pt-br/pycharm/download/#section=linux
+  - Baixar arquivo .tar.gz versão community
+  - Salvar o arquivo
+  - extrair 
+  - copiar a pasta e colocar aonde desejar
+  - acessar terminal
+  - acessar a pasta do community
+  - cd bin
+  - executar ./pycharm.sh
