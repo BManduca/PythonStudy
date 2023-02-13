@@ -189,3 +189,37 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
   - acessar a pasta do community
   - cd bin
   - executar ./pycharm.sh
+
+- Modulo 03 -> Tratando dados e fazendo contas
+
+  - Aula 06 -> Tipos primitivos e Saída de Dados
+    - Toda linguagem de programação trabalha basicamente com 4 tipos primitivos, o python em si, 
+    tem mais tipos... mas será visto o básico, ou seja, os 4 tipos conhecidos.
+      - Tipos primitivos:
+        - Int -> Valores inteiros
+        - Float -> Valores reais ou ponto flutuante
+        - Bool -> Valores booleanos ou lógicos
+        - Str -> Caracteres ou Strings
+
+
+      - Exemplos:
+        - Int: 7, -4, 0, 9875
+        - Float: 4.5, 0.076, -15.223, 7.0
+        - Bool: True e False 
+          - Os valores true e false, para os booleanos, devem ser estar com a primeira letra em 
+          caixa alta (capitalize)
+        - Str: 'Olá', '7.5', ''
+
+
+    - Uso do print
+      - print('A soma vale: ',soma)
+      - print('A soma vale: {}'.format(soma))
+        - As {} é um tipo de máscara, que vai ser substítuido por um método da própria string
+        - Podemos ver no exemplo acima, que no lugar do {}, vai aparecer o valor armazenado na var soma
+
+    - Funções
+      - isnumeric() -> verifica se o valor é númerico | Ele verifica se é possível converter o valor
+      presente em um número com o tipo primitivo int
+      - isalpha() -> verifica se o valor é uma letra(literal)
+      - isalphanum() -> Verifica se o valor inserido é alpha númerico
+      - isupper() -> verifica se o valor inserido esta capitalize
