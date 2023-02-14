@@ -223,3 +223,26 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
       - isalpha() -> verifica se o valor é uma letra(literal)
       - isalphanum() -> Verifica se o valor inserido é alpha númerico
       - isupper() -> verifica se o valor inserido esta capitalize
+
+
+  Aula 07
+    - Operações aritméticas
+    - Nessa aula, vamos aprender quais são os operadores aritméticos do Python e também sua ordem de precedência dentro de expressões matemáticas. Beja como funcionam os operadores de adição, subtração, multiplicação, 
+    divisão, exponenciação e quociente na linguagem Python 
+
+    https://www.cursoemvideo.com/curso/python-3-mundo-1/aulas/tratando-dados-e-fazendo-contas/modulos/operadores-aritmeticos-2/ ->13:04
+
+    Exemplo:
+      5 + 2 == 7
+      5 - 2 == 3
+      5 * 2 == 10
+      5 / 2 == 2.5
+      5 ** 2 == 25
+      5 // 2 == 2 
+      5 % 2 == 1
+
+    - Ordem de precedência
+      - {} (colchetes)
+      - ** {exponenciação}
+      - I, // , %
+      - +, - 

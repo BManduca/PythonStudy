@@ -1,5 +1,19 @@
 """
-Crie um script Python que leia dois números e tente mostrar a soma dos dois
+    Crie um script Python que leia dois números e tente mostrar a soma dos dois
+
+    Nessa aula, vamos aprender quais são os operadores aritméticos do Python e também 
+    sua ordem de precedência dentro de expressões matemáticas. 
+    Veja como funcionam os operadores de adição, subtração, multiplicação, 
+    divisão, exponenciação e quociente na linguagem Python.
+
+    adição -> +
+    subtração -> -
+    Multiplicação -> *
+    divisão inteira //
+    Potência -> **
+    Resto da divisão -> /
+
+
 """
 
 print('===== DESAFIO 03 ======\n')
