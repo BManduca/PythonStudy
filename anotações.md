@@ -242,7 +242,21 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
       5 % 2 == 1
 
     - Ordem de precedência
-      - {} (colchetes)
+      - () (parêntesis)
       - ** {exponenciação}
-      - I, // , %
+      - *, /, // , %
       - +, - 
+
+    - Exemplo
+      -> 5 + 3 * 2 ==> 5 + 6 ==> 11
+      -> 3 * 5 + 4 ** 2 ==> 15 + 16 ==> 31
+      -> 3 * ( 5 + 4 ) ** 2 ==> 3 * 9 ** 2 ==> 3 * 81 ==> 243
+
+    - Aula 07 
+      - uso do :20 -> ira imprimir o resultado presente na variavel em 20 espaços
+      - :>20 -> irá imprimir o resultado presente na variavel a direita do espaço
+      - :<20 -> irá imprimir o resultado presente na variavel a esquerda do espaço
+      - :^20 -> irá imprimir o resultado presente na variavel centralizado de acordo com o espaço
+
+      - para juntar dois prints e não realizar a quebra, é so adicionar no final do primeiro print
+      end=' '
