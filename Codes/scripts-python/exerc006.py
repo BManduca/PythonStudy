@@ -8,7 +8,9 @@ print('===== EXERCÍCIO 06 ======\n')
 valorEnt = int(input('Digite um número: '))
 vDobro = valorEnt * 2
 vTriplo = valorEnt * 3
-vRaizQuadrada = math.pow(valorEnt, 1/2)
+vRaizQuadrada = valorEnt ** (1/2)
+#math.pow(valorEnt, 1/2)
 
-print('Valor inicial inserido: {}\nO dobro de é {}\nO triplo é {}\nA raiz quadrada é {}'.format(valorEnt, int(vDobro), int(vTriplo), int(vRaizQuadrada)))
-
+print('\nValor inicial inserido: {}\n'.format(valorEnt))
+print('O dobro de {} é {}'.format(valorEnt, vDobro))
+print('O triplo de {} é {}. \nA raiz quadrada de {} é {:.2f}'.format(valorEnt, vTriplo, valorEnt, vRaizQuadrada))
