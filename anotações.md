@@ -260,3 +260,22 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
 
       - para juntar dois prints e não realizar a quebra, é so adicionar no final do primeiro print
       end=' '
+
+
+      => Aula 08 - Utilizando Módulos
+        - dentro da linguagem python, para incluir algo, precisamos utilizar o comando import
+        - depois do comando colocamos o nome do módulo ou da biblioteca que será importada]
+        - importações únicas (especificos)
+          - 'from doce import pudim'
+        - Importando as funcionalidades de um modulo (generalistas)
+          - import 'modulo'
+
+          - Modulo Math 
+            - ceil -> arredondamento para cima
+            - floor -> arredondamento para baixo
+            - trunc -> elimina valores da , para frente
+            - pow -> potência, tem funcionalidade semelhante aos dois *
+            - sqrt -> rais quadrada
+            - factorial -> calcular o fatorial
+
+          
