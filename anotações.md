@@ -278,4 +278,4 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
             - sqrt -> rais quadrada
             - factorial -> calcular o fatorial
 
-          
+          aula 08 => 16minutos
