@@ -253,10 +253,10 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
       -> 3 * ( 5 + 4 ) ** 2 ==> 3 * 9 ** 2 ==> 3 * 81 ==> 243
 
     - Aula 07 
-      - uso do :20 -> ira imprimir o resultado presente na variavel em 20 espaços
-      - :>20 -> irá imprimir o resultado presente na variavel a direita do espaço
-      - :<20 -> irá imprimir o resultado presente na variavel a esquerda do espaço
-      - :^20 -> irá imprimir o resultado presente na variavel centralizado de acordo com o espaço
+      - uso do :20 -> ira imprimir o resultado presente na variável em 20 espaços
+      - :>20 -> irá imprimir o resultado presente na variável a direita do espaço
+      - :<20 -> irá imprimir o resultado presente na variável a esquerda do espaço
+      - :^20 -> irá imprimir o resultado presente na variável centralizado de acordo com o espaço
 
       - para juntar dois prints e não realizar a quebra, é so adicionar no final do primeiro print
       end=' '
@@ -265,7 +265,7 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
       => Aula 08 - Utilizando Módulos
         - dentro da linguagem python, para incluir algo, precisamos utilizar o comando import
         - depois do comando colocamos o nome do módulo ou da biblioteca que será importada]
-        - importações únicas (especificos)
+        - importações únicas (específicos)
           - 'from doce import pudim'
         - Importando as funcionalidades de um modulo (generalistas)
           - import 'modulo'
@@ -275,7 +275,7 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
             - floor -> arredondamento para baixo
             - trunc -> elimina valores da , para frente
             - pow -> potência, tem funcionalidade semelhante aos dois *
-            - sqrt -> rais quadrada
+            - sqrt -> raiz quadrada
             - factorial -> calcular o fatorial
 
           aula 08 => 16minutos
