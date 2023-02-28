@@ -5,10 +5,14 @@
         Digite um número: 6.124
         A parte inteira do número 6.124 é 6.
 """
-import math
+from math import trunc
 
 print('===== EXERCÍCIO 16 ======\n')
 print('-'*100)
 valInicial = float(input('\nDigite um número: '))
-print('A parte inteira do número {} é {}\n'.format(valInicial, math.trunc(valInicial)))
+print('O valor digitado foi {} e a sua porção inteira é {}\n'.format(valInicial, trunc(valInicial)))
+'''
+    para não precisar importar módulos, podemos ver resolver o exerc acima da seguinte forma:
+    print('O valor digitado foi {} e a sua porção inteira é {}\n'.format(valInicial, int(valInicial)))
+'''
 print('-'*100)
