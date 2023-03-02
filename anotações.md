@@ -151,7 +151,7 @@ O Python
   - import this -> acessando o Python Zen (Zen of Python)
 
   - Atualizar versão MacOS -> acessar o site, baixar a versão atualizada em 'Downloads' e abrir o pacote baixado.
-    - O Pacote vem com interpretador, Idle(ambiente), vem com as 'baterias' incluidas, ou seja, as bibliotecas padrões instaladas
+    - O Pacote vem com interpretador, Idle(ambiente), vem com as 'baterias' incluídas, ou seja, as bibliotecas padrões instaladas
 
   - Install linux
     - sudo apt-get install python3.6
@@ -214,14 +214,14 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
     - Uso do print
       - print('A soma vale: ',soma)
       - print('A soma vale: {}'.format(soma))
-        - As {} é um tipo de máscara, que vai ser substítuido por um método da própria string
+        - As {} é um tipo de máscara, que vai ser substituído por um método da própria string
         - Podemos ver no exemplo acima, que no lugar do {}, vai aparecer o valor armazenado na var soma
 
     - Funções
-      - isnumeric() -> verifica se o valor é númerico | Ele verifica se é possível converter o valor
+      - isnumeric() -> verifica se o valor é numérico | Ele verifica se é possível converter o valor
       presente em um número com o tipo primitivo int
       - isalpha() -> verifica se o valor é uma letra(literal)
-      - isalphanum() -> Verifica se o valor inserido é alpha númerico
+      - isalphanum() -> Verifica se o valor inserido é alpha numérico
       - isupper() -> verifica se o valor inserido esta capitalize
 
 

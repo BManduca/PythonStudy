@@ -8,7 +8,7 @@
 
 print('\n===== EXERCÍCIO 22 ======\n')
 
-nome = str(input('Insira o seu nome completo: '))
+nome = str(input('Insira o seu nome completo: ')).strip()
 print('\n')
 
 
@@ -19,9 +19,17 @@ qtdLetrasNome = len(nomeSemEspaço)
 dividirNome = nome.split()
 tamanhoPrimeiroNome = len(dividirNome[0])
 
+'''
+  - forma paliativa de resolver a contagem de espaços
+  .format(len(nome) - nome.count(' '))
+
+  - forma paliativa para pegar o qtd de letras do primeiro nome
+  .format(nome.find(' '))
+'''
+
 print('-'*100)
 print('\nSeu nome completo em caixa alta: {}'.format(nomeMaiusc))
 print('Seu nome completo em caixa baixa: {}'.format(nomeMinusc))
 print('Total de letras do seu nome completo: {}'.format(qtdLetrasNome))
-print('Quantidade de letras no seu primeiro nome: {}\n'.format(tamanhoPrimeiroNome))
+print('O seu primeiro nome é {} e ele tem {} letras\n'.format(dividirNome[0], tamanhoPrimeiroNome))
 print('-'*100)

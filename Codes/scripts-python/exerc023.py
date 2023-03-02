@@ -33,3 +33,13 @@ print('Analisando o valor inserido: \n')
 print('Unidade: {}\nDezena: {}\nCentena: {}\nMilhar: {}'.format(unid, dez, cen, mil))
 print('-'*100)
 print('\n')
+
+'''
+  resolvendo com uso de string
+  valorInit = int(input('Informe o número: '))
+  n = str(valorInit)
+  print('Analisando o valor inserido: \n')
+  print('Unidade: {}\nDezena: {}\nCentena: {}\nMilhar: {}'.format(n[3], n[2], n[1], n[0]))
+
+  mas para esse caso funcionar, será preciso utilizar laços de repetição
+'''
