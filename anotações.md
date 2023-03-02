@@ -278,4 +278,115 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
             - sqrt -> raiz quadrada
             - factorial -> calcular o fatorial
 
-          aula 08 => 16minutos
+      => Aula 09 - Manipulando cadeias de textos
+        - Cadeias de caracteres: 
+          - Atribuição string em uma variável 
+            - frase = 'Curso em Vídeo Python'
+            - cada posição da frase por exemplo citada a cima, é posicionada 
+            em um 'mini espaço', mesmo os espaços entre as palavras, tem suas 
+            posições nesses 'mini espaços' e essas posições recebem indexes, 
+            que se iniciam em 0 e vão até o valor de letras necessários, que 
+            remete ao tamanho da palavra ou frase que está em questão dentro 
+            da memória.
+            - Através dessas posições ou indexes existentes nas cadeias de 
+            caracteres, podemos efetuar algumas operações nessas cadeias,
+            como por exemplo: 
+              - Fatiamento: Fatiar uma string, é conseguir pegar pedaços dela
+                - frase[9]
+                  - [] em python remete a estrutura de lista
+                  - Ao colocarmos frase[9], vai ser possível identificar dentro 
+                  da cadeia de caracteres, o carácter presente na posição 10
+                  - Analisarmos a cadeia de caracteres presente em frase, 
+                  podemos perceber que a 10 posição contêm a letra V
+                    - Vale ressaltar que em python é muito importante a diferença
+                    entra maiúsculas e minúsculas.
+                - Outra forma de realizar o fatiamento é assim frase[9:13]
+                  - esta forma condiz com a seleção dos caracteres presentes no 
+                  intervalo de 9 a 12, o carácter 13 não entra nesta parte, so 
+                  entraria, se fosse frase[9:14]
+                  - se eu colocasse frase[9:21], seria mostrado todos os ]
+                  caracteres da posição 9 ate a 20, pois como comentamos acima
+                  sempre é levado em consideração a posição ali marcada - 1
+                  - podemos fazer também frase[9:21:2]
+                    - Iremos começar no 9, iremos parar no carácter 20, 
+                    porém, iremos pular os caracteres de 2 em 2
+                  - e ao colocarmos frase[:5], o que acontece?
+                    - quando omitimos o valor antes dos :, significa que o 
+                    fatiamento irá iniciar do carácter 0
+                  - Se caso você quiser fatiar até o final da frase e não sabe 
+                  o final da mesma, cabe a colocar da seguinte forma 
+                  frase[15:]
+                  - frase[9::3] significa que vai do carácter 9, até o final e 
+                  ao mesmo tempo pulando de 3 em três caracteres, mostrando
+                  o terceiro carácter no ato do 'pulo'.
+
+              - Análise
+                - len(frase)
+                  - retorna o comprimento da frase, ou seja, como no exemplo 
+                  em questão, o comprimento de frase é 20
+                - frase.count('o')
+                  - se não colocar o valor (), com '', o sistema pensa que 
+                  o elemento é uma variável.
+                  - efetuar a contagem de quantas letras 'o' tem na frase usada
+                  como exemplo
+                - frase.count('o', 0, 13)
+                  - realizar a contagem do 'o', através do fatiamento da 
+                  posição 0 até a 12.
+                - frase.find('deo')
+                  - mostra aonde iniciou o elemento passado, 
+                  como instância e retorna a posição
+                - frase.find('Android')
+                  - como não existe a palavra Android, dentro de frase, será
+                  retornado o valor -1
+                - Operador 'in'
+                  - 'Curso' in frase
+                  - Verificar se existe a palavra Curso em frase
+                    - retornando True
+
+              - Transformação
+                - frase.replace('Python', 'Android')
+                  - será procurado a string Python e substituirá pela palavra 
+                  Android
+                - frase.upper()
+                  - com essa funcionalidade, toda a frase será colocada em 
+                  caixa alta, ou seja, tudo maiúsculo.
+                - frase.lower()
+                  - com essa funcionalidade, toda a frase será colocado em 
+                  minúsculo, ou seja, o contrário de upper()
+                - frase.capitalize()
+                  - ele pega toda a frase e aonde estava em minúsculo será
+                  mantido, aonde estava em maiúsculo será aplicado o efeito 
+                  lower, menos na primeira letra, ou seja, a primeira ficará
+                  em maiúsculo.
+                - frase.title()
+                  - Essa funcionalidade é semelhante com o capitalize, porém,
+                  o title, ele analisa palavra por palavra, através dos 
+                  espaços presentes na frase e aplica o upper na primeira letra
+                  de cada palavra.  
+                - frase.strip()
+                  - remove os espaços 'inúteis' no inicio e no fim da frase em 
+                  questão.
+                - frase.rstrip()
+                  - remove somente os espaços presentes no final da frase, 
+                  ou seja, do lado direito.
+                - frase.lstrip()
+                  - remove somente os espaços presentes no inicio da frase, 
+                  ou seja, do lado esquerdo.
+
+              - Divisão
+                - frase.split()
+                  - o split aplica nos espaços existentes uma divisão dentro
+                  da própria frase em questão
+                  - Ex.: Curso em Vídeo Python
+                  - apos a divisão, ou seja, aplicação do split()
+                    - Curso, indexação de 0 a 4
+                    - em, indexação de 0 a 1
+                    - Vídeo, indexação de 0 a 4
+                    - Python, indexação de 0 a 5
+
+              - Junção
+                - ' '.join(frase)
+                  - essa funcionalidade vai aplicar a junção dos elementos 
+                  existentes em frase, através do separador ' '.
+
+              => tempo aula 36:44
