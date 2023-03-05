@@ -264,7 +264,7 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
 
       => Aula 08 - Utilizando Módulos
         - dentro da linguagem python, para incluir algo, precisamos utilizar o comando import
-        - depois do comando colocamos o nome do módulo ou da biblioteca que será importada]
+        - depois do comando colocamos o nome do módulo ou da biblioteca que será importada
         - importações únicas (específicos)
           - 'from doce import pudim'
         - Importando as funcionalidades de um modulo (generalistas)
@@ -389,4 +389,36 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
                   - essa funcionalidade vai aplicar a junção dos elementos 
                   existentes em frase, através do separador ' '.
 
-              => tempo aula 36:44
+      => Aula 10 - Condições(Parte 1)
+        - Nessa aula, vamos aprender como utilizar estruturas 
+        condicionais simples e compostas nos seus programas em Python.
+        - condicionais:
+            carro.siga()
+            se carro.esquerda()
+              carro.siga()
+              carro.direita()
+              carro.siga()
+              carro.direita()
+              carro.esquerda()
+              carro.siga()
+              carro.direita()
+              carro.siga()
+            senao
+              carro.siga()
+              carro.esquerda()
+              carro.siga()
+              carro.esquerda()
+              carro.siga()
+            carro.pare()
+
+        - de uma visão diferente:
+          se carro.esquerda()
+            bloco _V_ (verdadeiro)
+          senao
+            bloco _F_ (falso)
+
+        - na visão de condicional em python:
+          if carro.esquerda():
+            bloco True
+          else:
+            bloco False
