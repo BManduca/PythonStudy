@@ -9,7 +9,7 @@
 
 import random
 
-print('\n===== EXERCÍCIO 27 ======\n')
+print('\n===== EXERCÍCIO 28 ======\n')
 
 print('{}-=-'.format('\033[1;34m') * 20)
 print('   VERIFICADOR DE VALOR GERADO PELO COMPUTADOR')
