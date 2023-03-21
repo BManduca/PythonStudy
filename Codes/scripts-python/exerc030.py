@@ -11,7 +11,7 @@ print('-=-' * 20)
 
 print('\n')
 
-valor = int(input('\nInsira um valor inicial: '))
+valor = int(input('\nInsira um número qualquer: '))
 
 if (valor % 2 == 0):
     print('\nO VALOR INSERIDO É PAR!\n')

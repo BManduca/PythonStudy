@@ -5,23 +5,20 @@
   VIAGENS ATÉ 200KM E R$0,45 PARA VIAGENS MAIS LONGAS.
 """
 
-print('\n===== EXERCÍCIO 31 ======\n')
+print('{}\n===== EXERCÍCIO 31 ======\n'.format('\033[0;35m'))
 
-print('{}-=-'.format('\033[1;34m') * 20)
-print('\n   PROGRAMA PARA CALCULAR O VALOR DE PASSAGENS!\n')
+print('{}-=-'.format('\033[0;33m') * 20)
+print('\n\n   PROGRAMA PARA CALCULAR O VALOR DE PASSAGENS!\n\n')
+print('---' * 20)
+print('{}\n\nVALORES:\n'.format('\033[0;31m'))
+print('\n => PARA VIAGENS ATÉ 200 Km, SÃO R$0,50 POR Km!')
+print(' => PARA VIAGENS MAIS LONGAS, SÃO R$0,45 POR Km!\n')
 print('-=-' * 20)
-print('\n')
-print('---' * 20)
-print('\nVALORES:\n')
-print('\n => PARA VIAGENS ATÉ 200 KM, SÃO R$0,50 POR KM!')
-print(' => PARA VIAGENS MAIS LONGAS, SÃO R$0,45 POR KM!\n')
-print('---' * 20)
-
 print('\n')
 
 distViagem = float(input('Insira a distância da viagem(km): '))
 
 if (distViagem <= 200):
-  print('\nPara um total de {:.2f} km, o valor da sua passagem será R${:.2f}\n'.format(distViagem, distViagem * 0.50))
+  print('{}\nA sua viagem terá um total de {:.2f} km, fechando o valor da sua passagem em R${:.2f}\n'.format('\033[0;30m', distViagem, distViagem * 0.50))
 else:
-  print('\nPara um total de {:.2f} km, o valor da sua passagem será R${:.2f}\n'.format(distViagem, distViagem * 0.45))
+  print('{}\nA sua viagem terá um total de {:.2f} km.\nSendo considerada uma viagem mais longa, o valor da passagem será de R${:.2f}\n'.format('\033[0;30m', distViagem, distViagem * 0.45))

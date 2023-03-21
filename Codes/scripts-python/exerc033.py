@@ -11,9 +11,9 @@ print('-=-' * 22)
 
 print('\n')
 
-numb1 = int(input('{}Insira o primeiro valor: '.format('\033[0;37m')))
-numb2 = int(input('Insira o segundo valor: '))
-numb3 = int(input('Insira o terceiro valor: '))
+numb1 = int(input('{}Insira o primeiro valor: '.format('\033[0;31m')))
+numb2 = int(input('{}Insira o segundo valor: '.format('\033[0;30m')))
+numb3 = int(input('{}Insira o terceiro valor: '.format('\033[0;36m')))
 
 menor = numb1
 maior = numb1

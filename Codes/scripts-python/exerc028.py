@@ -7,7 +7,8 @@
   perdeu
 """
 
-import random
+from random import randint
+from time import sleep
 
 print('\n===== EXERCÍCIO 28 ======\n')
 
@@ -17,11 +18,13 @@ print('-=-' * 20)
 
 print('\n')
 
-numComputer = random.randint(0, 5)
+numComputer = randint(0, 5)
 
 numUser = int(input('Qual valor escolhido pelo computador? '))
+print('\nPROCESSANDO RESPOSTA...')
+sleep(3)
 
-if numComputer == numUser:
-    print('Parabéns jogador! Você acertou e ganhou o jogo!')
+if numUser == numComputer:
+    print('\nParabéns jogador! Você acertou e ganhou o jogo!\n')
 else:
-    print('Infelizmente você perdeu o jogo! Insira uma ficha e tente novamente!\n')
+    print('\nCOMPUTER WINS!\nEu pensei no número {} e não no {}!\nInsira uma ficha e tente novamente!\n'.format(numComputer, numUser))

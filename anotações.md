@@ -422,3 +422,39 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
             bloco True
           else:
             bloco False
+
+  Aula 11:
+  - Padrão ANSI (padrão normalização internacional)
+    - Escape sequence
+    - tudo dentro de ANSI, começa com \(carácter escape)
+    - Para representar uma cor em python, você vai iniciar com \033[ e fechar o 
+    código com uma letra m, ficando da seguinte forma: \033[m
+    - Entre o [ e o m, vai ser adicionado o código da cor desejada
+    - a sequencia de código no espaço mencionado acima é [STYLE;TEXT;BGm
+      - Códigos para sequencia de estilo:
+        - 0 -> sem estilo nenhum
+        - 1 -> Negrito
+        - 4 -> Underline
+        - 7 -> Inverter as configurações (Negative)
+
+      - Códigos para sequência de cores
+        - 30 -> Branco
+        - 31 -> Vermelho
+        - 32 -> Verde
+        - 33 -> Amarelo
+        - 34 -> Azul
+        - 35 -> Magenta
+        - 36 -> Ciano
+        - 37 -> Cinza
+
+      - Códigos para Background
+        - 40 -> Branco
+        - 41 -> Vermelho
+        - 42 -> Verde
+        - 43 -> Amarelo
+        - 44 -> Azul
+        - 45 -> Magenta
+        - 46 -> Ciano
+        - 47 -> Cinza
+
+-> tempo 15:13

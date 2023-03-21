@@ -11,7 +11,11 @@ print('-=-' * 20)
 
 print('\n')
 
-ano = int(input('Insira o ano escolhido: '))
+from datetime import date
+ano = int(input('Que ano você gostaria de analisar?\nInsira 0 caso queira verificar o ano atual: '))
+
+if ano == 0:
+    ano = date.today().year
 
 if (ano % 400 == 0) or ((ano % 4 == 0) and (ano % 100 != 0)):
     print('\nO ano {} é bissexto!\n'.format(ano))
