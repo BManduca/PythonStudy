@@ -457,4 +457,20 @@ https://www.youtube.com/watch?v=ElRd0cbXIv4&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3
         - 46 -> Ciano
         - 47 -> Cinza
 
--> tempo 15:13
+__________________________________________________________________________________________________________________________________________________________________
+
+
+Mundo 02 - Curso de Python
+
+Assuntos: 
+- Condições 
+  - Simples
+  - Compostas
+  - Aninhadas
+
+
+- Iterações
+  - estruturas de repetição com varíavel de controle, com teste lógico no ínicio
+  - Repetições infinitas com interrupção no meio
+
+__________________________________________________________________________________________________________________________________________________________________
