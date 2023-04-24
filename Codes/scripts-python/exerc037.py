@@ -14,6 +14,7 @@ print('\nPROGRAMA PARA CONVERSÃO DE BASE NÚMERICA\n')
 print('-'*50)
 
 question = str(input('\nGostaria de iniciar o processo de conversão númerica?\n'))
+print('\n')
 
 while question != 'Nao':
     
@@ -28,11 +29,14 @@ while question != 'Nao':
     valConver = int(input('\nInsira a base de conversão escolhida: '))
     
     if valConver == 1:
-        print('\n{} convertido para BINÁRIO é igual a {}'.format(number, bin(number)[2:]))
+        print('\n{} convertido para BINÁRIO é igual a {}\n'.format(number, bin(number)[2:]))
+        print('-'*50)
     elif valConver == 2:
-        print('\n{} convertido para OCTAL é igual a {}'.format(number, oct(number)[2:]))
+        print('\n{} convertido para OCTAL é igual a {}\n'.format(number, oct(number)[2:]))
+        print('-'*50)
     elif valConver == 3:
-        print('\n{} convertido para HEXADECIMAL é igual a {}'.format(number, hex(number)[2:]))
+        print('\n{} convertido para HEXADECIMAL é igual a {}\n'.format(number, hex(number)[2:]))
+        print('-'*50)
     else:
         print('\nOpção inválida!! Tente novamente!')
 
