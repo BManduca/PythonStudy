@@ -470,7 +470,36 @@ Assuntos:
 
 
 - Iterações
-  - estruturas de repetição com varíavel de controle, com teste lógico no ínicio
+  - estruturas de repetição com variável de controle, com teste lógico no inicio
   - Repetições infinitas com interrupção no meio
+
+Aula 012:
+
+  - Condições aninhadas:
+
+    carro.siga()
+    if carro.esquerda():
+      carro.siga()
+      carro.direita()
+      carro.siga()
+      carro.direita()
+      carro.esquerda()
+      carro.siga()
+      carro.direita()
+      carro.siga()
+    elif carro.direita():
+      carro.siga()
+      carro.esquerda()
+      carro.siga()
+      carro.esquerda()
+      carro.siga()
+    else:
+      carro.siga()
+    carro.pare()
+
+
+
+tempo 13:11
+
 
 __________________________________________________________________________________________________________________________________________________________________
