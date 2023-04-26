@@ -31,10 +31,31 @@ print('\n')
 
 while question != 'N':
 
-    print('-'*50)
+    print('-'*70)
     name = str(input('Insira o seu nome: '))
     age = int(input('\nInsira a sua idade: '))
 
     if age > 18:
         tempoAlistamento = age - 18
-        print('Já passou do tempo de alistamento! ')
+        print('\nO seu tempo de alistamento já passou!\nVocê, {} deveria ter se alistado há {} ano(s)'.format(name, tempoAlistamento))
+    elif age < 18:
+        tempoAlistamento = 18 - age
+        print('\nVocê {}, ainda não pode se alistar, pois, ainda falta(m) {} ano(s)!'.format(name, tempoAlistamento))
+    else:
+        print('\nParabéns {}!\nEste ano você pode buscar o alistamento!'.format(name))
+    print('-'*70)
+
+    print('\n\nGostaria de iniciar um novo processo de verificação?\n')
+    print('-'*17)
+    print('| S - Para sim |\n| N - Para não |')
+    print('-'*17)
+    question = str(input('Resposta: '))
+    system("clear")
+
+
+print('\nObrigado por utilizar meu software!\n')
+
+print('A tela será limpa em 5 segundos!')
+time.sleep(5)
+
+system("clear")
