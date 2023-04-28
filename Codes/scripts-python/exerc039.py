@@ -37,7 +37,7 @@ while question != 'N':
 
     if age > 18:
         tempoAlistamento = age - 18
-        print('\nO seu tempo de alistamento já passou!\nVocê, {} deveria ter se alistado há {} ano(s)'.format(name, tempoAlistamento))
+        print('\nO seu tempo de alistamento já passou!\nVocê {}, deveria ter se alistado há {} ano(s)'.format(name, tempoAlistamento))
     elif age < 18:
         tempoAlistamento = 18 - age
         print('\nVocê {}, ainda não pode se alistar, pois, ainda falta(m) {} ano(s)!'.format(name, tempoAlistamento))
