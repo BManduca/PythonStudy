@@ -22,16 +22,16 @@ print('\nPROGRAMA PARA APROVAÇÃO DE EMPRÉSTIMO BANCÁRIO\n')
 
 questionEmprest = str(input('Bom Dia!\nGostaria de iniciar um empréstimo conosco?\n'))
 
-while questionEmprest != 'Nao':
+while questionEmprest != 'Nao' and questionEmprest != 'N' and questionEmprest != 'n':
 
   print('\nFavor inserir seu nome para iniciarmos o processo de empréstimo: ')
 
   nome = str(input())
 
-  print('\nInsira agora o valor da casa: ')
+  print('\nInsira agora o valor da casa(em reais): ')
   valCasa = float(input())
 
-  print('\nInsira o seu salário mensal: ')
+  print('\nInsira o seu salário mensal do comprador(em reais): ')
   salario = float(input())
 
   print('\nInsira em quantos anos pretende pagar o empréstimo: ')
@@ -40,7 +40,7 @@ while questionEmprest != 'Nao':
 
   prestacao = valCasa / qtdMeses
 
-  print('\nValor da prestacao {:.2f}'.format(prestacao))
+  print('\nValor da prestacao R$ {:.2f}'.format(prestacao))
 
   valPrest30pSal = salario * 0.3
 
