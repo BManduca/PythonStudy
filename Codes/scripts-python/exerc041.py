@@ -6,11 +6,12 @@ sua categoria, de acordo com a sua idade:
 - Até 9 anos: Mirim
 - Até 14 anos: Infantil
 - Até 19 anos: Júnior
-- Até 20 anos: Sênior
-- Acima de 20 anos: Master
+- Até 25 anos: Sênior
+- Acima de 25 anos: Master
 """
 
 from os import system
+from datetime import date
 import time
 
 print('\n')
@@ -29,18 +30,19 @@ print('\n')
 
 while question != 'N':
     print('-'*70)
-    name = str(input('\nINSIRA O NOME DO(A) ATLETA: '))
+    name = str(input('\nINSIRA O NOME DO(A) ATLETA: ')).upper()
+    anoAtual = date.today().year
     bornYear = int(input('\nINSIRA O ANO DE NASCIMENTO DO(A) ATLETA: '))
-    actualYear = 2023
-    ageAthlete = actualYear - bornYear
+    ageAthlete = anoAtual - bornYear
+    print('\nO ATLETA {} TEM {} ANOS'.format(name, ageAthlete))
 
     if ageAthlete <= 9:
         print('\nATLETA: {}\nCATEGORIA: MiRIM\n'.format(name))
     elif ageAthlete > 9 and ageAthlete <= 14:
         print('\nATLETA: {}\nCATEGORIA: INFANTIL\n'.format(name))
-    elif ageAthlete > 14 and ageAthlete <= 19:
+    elif ageAthlete <= 19:
         print('\nATLETA: {}\nCATEGORIA: JUNIOR\n'.format(name))
-    elif ageAthlete > 19 and ageAthlete <= 20:
+    elif ageAthlete <= 25:
         print('\nATLETA: {}\nCATEGORIA: SENIOR\n'.format(name))
     else:
         print('\nATLETA: {}\nCATEGORIA: MASTER\n'.format(name))

@@ -37,7 +37,7 @@ while question != 'N':
 
     if media < 5.0:
         print('\nO(A) aluno(a) {} está reprovado! Sua média é {:.2f}\n'.format(name, media))
-    elif media > 5.0 and media < 6.9:
+    elif 7 > media >= 5.0:
         print('\nO(A) aluno(a) {} se encontra em recuperação! Sua média é {:.2f}\n'.format(name, media))
     else:
         print('\nParabéns {}!\nVocê está aprovado(a)!\nSua média é {:.2f}\n'.format(name, media))
