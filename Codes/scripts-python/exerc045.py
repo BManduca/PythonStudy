@@ -50,33 +50,31 @@ while question != 'N' and question != 'n':
 
     if opcaoComputer == 0:
         if opcaoJogador == 0:
-            print('==> EMPATE\n')
+            print('==> EMPATE {}\n'.format('\U0001F610'))
         elif opcaoJogador == 1:
-            print('==> O JOGADOR VENCEU!\n')
+            print('==> O JOGADOR VENCEU! {}\n'.format('\U0001F60A'))
         elif opcaoJogador == 2:
-            print('==> O COMPUTADOR VENCEU!\n')
+            print('==> O COMPUTADOR VENCEU! {}\n'.format('\U0001F636'))
         else:
             print('==> JOGADA INVÁLIDA!\n')
     elif opcaoComputer == 1:
         if opcaoJogador == 0:
-            print('==> O COMPUTADOR VENCEU!\n')
+            print('==> O COMPUTADOR VENCEU! {}\n'.format('\U0001F636'))
         elif opcaoJogador == 1:
-            print('==> EMPATE\n')
+            print('==> EMPATE {}\n'.format('\U0001F610'))
         elif opcaoJogador == 2:
-            print('==> O JOGADOR VENCEU!\n')
+            print('==> O JOGADOR VENCEU! {}\n'.format('\U0001F60A'))
         else:
             print('==> JOGADA INVÁLIDA!\n')
     elif opcaoComputer == 2:
         if opcaoJogador == 0:
-            print('==> O JOGADOR VENCEU!\n')
+            print('==> O JOGADOR VENCEU! {}\n'.format('\U0001F60A'))
         elif opcaoJogador == 1:
-            print('==> O COMPUTADOR VENCEU!\n')
+            print('==> O COMPUTADOR VENCEU! {}\n'.format('\U0001F636'))
         elif opcaoJogador == 2:
-            print('==> EMPATE\n')
+            print('==> EMPATE {}\n'.format('\U0001F610'))
         else:
             print('==> JOGADA INVÁLIDA!\n')
-    else:
-        print('==> JOGADA INVÁLIDA!\n')
 
         
     sleep(5)

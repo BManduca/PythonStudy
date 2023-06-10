@@ -41,18 +41,20 @@ print('\n')
 while question != 'N':
 
     print('-'*70)
-    name = str(input('\nINSIRA O NOME DO PACIENTE: '))
+    name = str(input('\nINSIRA O NOME DO PACIENTE: ')).upper()
     peso = float(input('\nINSIRA O PESO DO PACIENTE: '))
     altura = float(input('\nINSIRA A ALTURA DO PACIENTE: '))
     imc = peso / (altura ** 2)
 
+    print('\nO IMC do {} é {:.1f}\n'.format(name, imc))
+
     if imc < 18.5:
         print('\n ==> ABAIXO DO PESO\n')
-    elif imc >= 18.5 and imc < 25:
+    elif 18.5 <= imc < 25:
         print('\n ==> PESO IDEAL\n')
-    elif imc >= 25 and imc < 30:
+    elif 25 <= imc < 30:
         print('\n ==> SOBREPESO\n')
-    elif imc >= 30 and imc < 40:
+    elif 30 <= imc < 40:
         print('\n ==> OBESIDADE\n')
     else:
         print('\n ==> OBESIDADE MÓRBIDA\n')

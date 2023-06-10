@@ -503,3 +503,31 @@ tempo 13:11
 
 
 __________________________________________________________________________________________________________________________________________________________________
+
+
+Aula 13
+
+- Laços de repetição (parte 1)
+
+  - Uma forma de executar um comando de maneira repetitiva até que obtenha uma ordem ou um pedido para finalizar ou realizar outra ação.
+
+  - portugues:
+    - laço c no intervalor(1,10)
+      - passo
+    - pega
+
+
+  - python
+    - for c in ranget(1,10):
+      - passo
+    - pega
+
+  - para realziar a contagem de valores através de um for, por exemplo de 1 ate 5:
+    - for c in ranget(1,6):
+      - print(c)
+    - print('FIM')
+
+  - para contar de maneira contrária, basta adicionar um -1 na iteração
+    - for c in ranget(1, 10, -1):
+      - print(c)
+    - print('FIM')

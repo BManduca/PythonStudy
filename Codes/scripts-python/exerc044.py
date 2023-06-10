@@ -30,6 +30,9 @@ print('\n')
 while question != 'N':
 
     print('-'*70)
+    print('\n')
+    print('{:=^40}'.format(' LOJAS MANDUCA '))
+
     nameProduto = str(input('\nInsira o nome do produto: '))
     preço = float(input('\nDigite o valor do produto: R$ '))
     print('''Escolha uma forma de pagamento:
@@ -50,10 +53,16 @@ while question != 'N':
         print('\nAo pagar o produto {} à vista no cartão, o valor ficará {:.2f}\n'.format(nameProduto, valor))
     elif opcao == 3:
         valor = preço
-        print('\nAo pagar o produto {} em até 2x no cartão, o valor ficará {:.2f}\n'.format(nameProduto, valor))
-    else:
+        parcela = valor / 2
+        print('\nAo pagar o produto {} em até 2x no cartão,\no valor de cada parcela será de R$ {:.2f} sem juros\n\nAo final a compra resultará em um total de R$ {:.2f}\n'.format(nameProduto, parcela, valor))
+    elif opcao == 4:
         valor = preço + (preço * 20 / 100)
-        print('\nAo pagar o produto {} em 3x ou mais no cartão, o valor ficará {:.2f}\n'.format(nameProduto, valor))
+        totalParcelas = int(input('Quantas parcelas? '))
+        parcela = valor / totalParcelas
+        print('\nAo pagar o produto {} em {}x no cartão,\no valor de cada parcela será de R$ {:.2f} com juros\n\nAo final a compra resultará em um total de R$ {:.2f}\n'.format(nameProduto, totalParcelas, parcela,valor))
+    else:
+        total = 0
+        print('\n{}OPÇÃO INVÁLIDA DE PAGAMENTO!{}\n'.format('\033[1;31m','\033[0;30m'))
     print('-'*70)
 
     print('\n\nGOSTARIA DE REALIZAR UM NOVO CÁLCULO DO VALOR DO PRODUTO?\n')
