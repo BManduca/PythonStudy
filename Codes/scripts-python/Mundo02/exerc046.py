@@ -18,6 +18,7 @@ for c in range(10,-1, -1):
     print(c)
     sleep(1)
 
+print('BUM BUUUM POOOW!')
 print('\nFELIZ {}\n'.format(anoAtual + 1))
 print('\nMUITA PAZ\nSAÚDE\nFESTA\nE\nAMOR!')
 # print(emoji.emojize("BUM!\nBUM!\nPOOOW!\n:fireworks:", use_aliases=True))

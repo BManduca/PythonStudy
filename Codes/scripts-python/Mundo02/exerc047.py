@@ -10,8 +10,7 @@ print('-'*105)
 print('\n')
 
 print('Os números [ ',end="")
-for c in range(1,50):
-    if c % 2 == 0:
-        print(' {}, '.format(c),end="")
+for c in range(2, 51, 2):
+    print(' {} '.format(c),end="")
 
 print(' ] são todos pares!\n')

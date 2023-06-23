@@ -531,3 +531,9 @@ Aula 13
     - for c in ranget(1, 10, -1):
       - print(c)
     - print('FIM')
+
+  - calculo de n-ésimo termo de uma PA
+    - nTermo = firstTerm + (n-1) * razao
+
+  - adicionando termo na listagem:
+    - lista.append(i)

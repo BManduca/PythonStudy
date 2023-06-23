@@ -14,15 +14,14 @@ soma = 0
 contador = 0
 
 print('Os números ',end="")
-for c in range(0,501):
-    #calcula os números ímpares usando o resto da divisão
-    if c % 2 == 1:
-        # calcula quais os números ímpares são multiplos de 3 usando o resto da divisão
-        if c % 3 == 0:
-            soma += c
-            #somar quantos números foram somados ao total
-            contador += 1
-            print(' {}, '.format(c),end="")
+for c in range(1, 501, 2):
+    # trazendo os números ímpares pulando de 2 em 2
+    # calcula quais os números ímpares são multiplos de 3 usando o resto da divisão
+    if c % 3 == 0:
+        soma += c
+        #somar quantos números foram somados ao total
+        contador += 1
+        print(' {} '.format(c),end="")
 print(' são todos ímpares!\n')
 
 print('\nA soma de todos os {} valores é {}'. format(contador, soma))
