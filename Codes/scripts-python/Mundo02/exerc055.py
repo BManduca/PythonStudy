@@ -12,11 +12,10 @@ print('\n')
 maiorPeso = 0
 menorPeso = 0
 
-for i in range(1,6):
-    print('PESO DA PESSOA {}: '.format(i), end="")
-    peso = float(input(''))
+for iPessoa in range(1,6):
+    peso = float(input('PESO DA {}º PESSOA: '.format(iPessoa)))
 
-    if i == 1:
+    if iPessoa == 1:
         maiorPeso = peso
         menorPeso = peso
     else:

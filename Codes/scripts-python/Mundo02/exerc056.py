@@ -11,9 +11,9 @@ maiorIdadeHomem = 0
 nomeHomemMaisVelho = ''
 totalMulherMenos20 = 0
 
-print('-'*83)
+print('-'*40)
 print('\n------------- PROGRAMA 056 -------------\n')
-print('-'*83)
+print('-'*40)
 
 
 for p in range(1, 5):

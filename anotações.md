@@ -537,3 +537,17 @@ Aula 13
 
   - adicionando termo na listagem:
     - lista.append(i)
+
+__________________________________________________________________________________________________________________________________________________________________
+
+
+Aula 14
+
+- diferença de um for para um while:
+  - no for nós sabemos o limite ou ate quando temos que ir com o laço de repetição
+    - conhecida também como estrutura de repetição com variável de controle
+  - while nos sabemos o nosso objetivo como no exemplo do for, porém, não sabemos quantos passos ou quanto teremos que fazer para alcançar o mesmo 
+    - é conhecida também como estrutura de repetição com teste lógico
+    - no while temos também a questão da flag ou condição de parada, que é quando usamos uma condição para realizar uma parada 
+
+    TEMPO: 28:27

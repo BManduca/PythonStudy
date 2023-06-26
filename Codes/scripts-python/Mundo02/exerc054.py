@@ -9,26 +9,33 @@ print('\n------------------------ PROGRAMA PARA VERIFICAR MAIORIDADE -----------
 print('-'*84)
 print('\n')
 
+
+from datetime import date
+vetMaior = []
 vetMaiorIdade = []
+totMaior = 0
+vetMenor = []
 vetMenorIdade = []
+totMenor = 0
 
-anoAtual = int(input('Insira o ano atual: '))
-print('')
+anoAtual = date.today().year
 
-for i in range(0,8):
-    print('ANO NASCIMENTO DA PESSOA {}: '.format(i), end="")
-    anoNasc = int(input(''))
+for iPessoa in range(1,8):
+    anoNasc = int(input('EM QUE ANO A {}º PESSOA NASCEU? '.format(iPessoa)))
 
     idade = anoAtual - anoNasc
 
     if idade >= 18:
-        print('Pessoa {} nasceu no ano de {} e é maior de idade({} ano(s))\n'.format(i+1, anoNasc, idade))
-        vetMaiorIdade.append(anoNasc)
+        vetMaior.append(anoNasc)
+        vetMaiorIdade.append(idade)
+        totMaior += 1
     else:
-        print('Pessoa {} nasceu no ano de {} e não é maior de idade({} ano(s))\n'.format(i+1, anoNasc, idade))
-        vetMenorIdade.append(anoNasc)
+        vetMenor.append(anoNasc)
+        vetMenorIdade.append(idade)
+        totMenor += 1
 
+print('\n')
 print('-'*50)
-print('Maiores de idade: {}'.format(vetMaiorIdade))
-print('\nMenores de idade: {}'.format(vetMenorIdade))
+print('Ao todo tivemos {} pessoas maiores de idade\nQue nasceram nos anos: {}\nCom as seguintes idades: {}'.format(totMaior,vetMaior, vetMaiorIdade))
+print('\n\nAo todo tivemos {} pessoas menores de idade \nQue nasceram nos anos: {}\nCom as seguintes idades: {}'.format(totMenor,vetMenor, vetMenorIdade))
 print('-'*50)
