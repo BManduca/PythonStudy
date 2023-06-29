@@ -76,5 +76,6 @@ while optionMenu != 7:
         print('\nOPÇÃO INSERIDA ESTÁ INCORRETA!\nTENTE NOVAMENTE!')
     print('=-=' * 10)
     sleep(2)
+    
 
 print('\nFINALIZANDO PROGRAMA...!\nVOLTE SEMPRE!\n')
