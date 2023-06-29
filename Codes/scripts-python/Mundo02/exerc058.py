@@ -5,7 +5,6 @@
 """
 
 from random import randint
-from time import sleep
 
 print('\n')
 print('{}-'.format('\033[1;34m')*85)
