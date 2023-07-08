@@ -22,7 +22,8 @@ print('\n')
 # MANEIRA TRADICIONAL DE RESOLVER O FATORIAL 
 valFatorial = int(input('INSIRA UM VALOR PARA CALCULAR O FATORIAL: '))
 resultFatorial = factorial(valFatorial)
-result = 1
+#fator nulo de multiplicação
+fatorial = 1
 cont = valFatorial
 
 print('Calculando o fatorial de {}...\n'.format(valFatorial))
@@ -30,8 +31,9 @@ sleep(2)
 print('{}! => '.format(valFatorial), end='')
 while cont > 0:
     print('{}'.format(cont), end='')
-    print(' x ' if cont > 1 else ' = {}'.format(resultFatorial), end='')
+    # print(' x ' if cont > 1 else ' = {}'.format(resultFatorial), end='')
+    print(' x ' if cont > 1 else ' = ', end='')
+    fatorial *= cont
     cont -= 1
-print('\n')
-# print('O FATORIAL DE {} É {}'.format(valFatorial, resultFatorial))
+print('{}'.format(fatorial))
 
