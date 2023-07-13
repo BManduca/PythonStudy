@@ -17,11 +17,18 @@ print('')
 
 termo = firstTerm
 contPA = 1
+totalTermosPA = 0
+maisTermos = 10
 
 ## PA = a1, (a1 + r), (a1 + 2r), (a1 + 3r), (a1 + 4r), (a1 + 5r)....
 
-while contPA <= 10:
-    print('{} '.format(termo), end='➙ ')
-    termo += razao
-    contPA += 1
-print('ACABOU!!\n')
+while maisTermos != 0:
+    totalTermosPA += maisTermos
+    print(' ')
+    while contPA <= totalTermosPA:
+        print('{} '.format(termo), end='➙ ')
+        termo += razao
+        contPA += 1
+    print('PAUSA...\n')
+    maisTermos = int(input('QUANTOS TERMOS VOCÊ QUER MOSTRAR A MAIS? '))
+print('ACABOU!!\n PROGRESSÃO FINALIZADA COM UM TOTAL DE {} TERMOS!\n'.format(totalTermosPA))
