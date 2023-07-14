@@ -40,6 +40,7 @@ while optionMenu != 7:
     | [7] SAIR DO PROGRAMA |
     ------------------------
     ''')
+    
     optionMenu = int(input('\n>>>>>> Qual a opção escolhida? '))
 
     if optionMenu == 1:
