@@ -78,4 +78,4 @@ while optionMenu != 7:
     sleep(2)
     
 
-print('\nFINALIZANDO PROGRAMA...!\nVOLTE SEMPRE!\n')
+print('\nPROGRAMA FINALIZADO COM SUCESSO...!\nVOLTE SEMPRE!\n')

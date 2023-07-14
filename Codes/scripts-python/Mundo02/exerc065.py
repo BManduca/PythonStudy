@@ -29,6 +29,6 @@ while continuar in 'Ss':
         if n < menor:
             menor = n
     continuar = str(input('DESEJA CONTINUAR? [S/N]: ')).upper().strip()[0]
-    print(' ')
+print(' ')
 media = somatorio / quantValores
 print('VOCÊ INSERIU UM TOTAL DE {} ELEMENTO(S)\nA SOMA ENTRE ELES É {}\nA MÉDIA DOS VALORES LIDOS É {:.2f}\nO MAIOR VALOR LIDO = {}\nO MENOR VALOR LIDO = {}'.format(quantValores, somatorio, media, maior, menor))
