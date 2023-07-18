@@ -29,11 +29,16 @@ cont = valFatorial
 print('Calculando o fatorial de {}...\n'.format(valFatorial))
 sleep(2)
 print('{}! => '.format(valFatorial), end='')
-while cont > 0:
-    print('{}'.format(cont), end='')
-    # print(' x ' if cont > 1 else ' = {}'.format(resultFatorial), end='')
-    print(' x ' if cont > 1 else ' = ', end='')
-    fatorial *= cont
-    cont -= 1
+# while cont > 0:
+#     print('{}'.format(cont), end='')
+#     # print(' x ' if cont > 1 else ' = {}'.format(resultFatorial), end='')
+#     print(' x ' if cont > 1 else ' = ', end='')
+#     fatorial *= cont
+#     cont -= 1
+for i in range(1, valFatorial + 1):
+    print('{}'.format(i), end='')
+    print(' x ' if i < valFatorial else ' = ', end='')
+    fatorial *= i
+    i += 1
 print('{}'.format(fatorial))
 
