@@ -551,3 +551,22 @@ Aula 14
     - no while temos também a questão da flag ou condição de parada, que é quando usamos uma condição para realizar uma parada 
 
     TEMPO: 28:27
+
+___________________________________________________________________________________________________
+
+Aula 15
+
+ - pontos principais da aula: Break e loopings infinitos
+ - apartir da versão 3.6 do python, mais especificamente na 3.6.3, foi feita uma PEP (Python Enhancement Proposal), uma proposta de melhoria do python e a PEP 498, se trata de uma forma de escrever em python chamada Fstrings. Segue um exemplo: 
+
+print('A soma vale {}'.format(var)) -> maneira vista no curso ate o momento
+
+#usando fstrings
+print(f'A soma vale {}') -> é adicionado um f antes de começar a parte de strings do print e quando usamos as fstrings, é começado a usar uma técnica chamada interpolação dentro de strings... e o resultado seria esse:
+
+print(f'A soma vale {soma}') -> assim já mostraria a resposta completa
+
+___________________________________________________________________________________________________
+
+Aula 16
+
