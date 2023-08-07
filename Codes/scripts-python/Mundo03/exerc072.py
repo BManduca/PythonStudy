@@ -46,7 +46,7 @@ while True:
 
     # if resposta == 'N':
     #     break
-
+time.sleep(1)
 print(f'\n ===> VOCÊ DIGITOU O NÚMERO {valores[val].upper()} <===')
 print('='*60)
 print('\n')
