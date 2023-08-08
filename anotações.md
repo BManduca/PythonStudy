@@ -567,6 +567,3 @@ print(f'A soma vale {}') -> é adicionado um f antes de começar a parte de stri
 print(f'A soma vale {soma}') -> assim já mostraria a resposta completa
 
 ___________________________________________________________________________________________________
-
-Aula 16
-

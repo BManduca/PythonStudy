@@ -89,17 +89,97 @@
 
         - métodos para verificação de maior e menor valor de uma tupla => max() e min()
 
+----------------------------------------------------------------------------------------------------------
+
+- Aula 17
+
+    => LISTAS: são compostas por [] e não parentêses como nas tuplas 
+
+    => principal diferença entre listas e tuplas, é que a tupla é imutável e as listas
+    não são
+
+    => para adicionar elementos na lista, usamos o comando append()
+        -> lista.append('')
+
+    => para adicionarmos elementos em posições específicas na lista, usaremos o 
+    comando insert()
+        -> lista.insert(posição,'')
+
+    => métodos para eliminar elementos de uma lista:
+        -> del lista[3]
+        - lista.pop(3) -> ao colocar somente lista.pop(), será eliminado
+        o último elemento
+        - lista.remove('') -> não indica o index e sim o valor que será eliminado e sempre elimina
+        o primeiro valor encontrado, caso exista mais de um mesmo valor escolhido
+
+    => condicionais com lista:
+        if '' in lista:
+            lista.remove('')
+
+    => criando listas através de rand's
+        -> valores = list(range(4,11))
+        -> essa lista vira totalmente ordenada
+
+    => criando lista desordenada
+        -> valores = [8, 4, 9, 3, 1, 7, 0]
+            -> valores.sort() => ordenando a lista
+
+            -> aplicando metodo sort com ordem inversa
+                - valores.sort(reverse=True)
+
+    => Sabendo o tamanho da lista
+        -> valores = [8, 1, 6, 9, 4, 5, 0]
+        -> len(valores)
+    
+        
+    ----------------------------------------------------------------
+    aux = ['Brunno', 'João', 'Maria', 'Felipe']
+
+    print(aux)
+
+    aux[2] = 'Rodrigo'
+
+    print(aux)
+
+    => as respostas serão diferentes..
+    ----------------------------------------------------------------
+
+    => Funcionalidades com listas:
+        - ao igualar uma lista com outra, ou seja, fazer uma lista receber outra:
+            a = [2, 8, 6, 1]
+            b = a
+
+            - automaticamente quando fazemos a operação de uma lista receber outra, 
+            elas criam uma ligação entre si e desta forma se alterarmos algum valor,
+            por exemplo em b, na lista a também será alterada
+
+        - mas podemos fazer com que a lista b recebe todos os elementos da lista a, 
+        através de fatiamento:
+            - b = a[:]
+            - desta forma, não é criado uma 'ligação' entre as listas como vimos
+            anteriomente... e sim vai ser feito uma cópia 
+
+
+
 '''
 
-a = (1, 5, 4)
-b = (5, 8, 1, 2)
+# a = (1, 5, 4)
+# b = (5, 8, 1, 2)
 
-ab = a + b 
-ba = b + a
+# ab = a + b 
+# ba = b + a
 
-print(f'CONCATENAÇÃO AB => {ab}')
-print(f'CONCATENAÇÃO BA => {ba}')
+# print(f'CONCATENAÇÃO AB => {ab}')
+# print(f'CONCATENAÇÃO BA => {ba}')
 
-pessoa = ('Brunno Manduca', 31, 'M', 78.3)
-print(pessoa)
+# pessoa = ('Brunno Manduca', 31, 'M', 78.3)
+# print(pessoa)
 
+
+aux = ['Brunno', 'João', 'Maria', 'Felipe']
+
+# print(aux)
+
+aux[2] = 'Rodrigo'
+
+print(aux)
