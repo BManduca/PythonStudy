@@ -13,7 +13,7 @@ print('='*60)
 print('\n')
 
 print('='*60)
-print('{:=^60}'.format(' MOSTAR O NÚMERO ESCOLHIDO POR EXTENSO '))
+print('{:=^60}'.format(' MOSTRAR O NÚMERO ESCOLHIDO POR EXTENSO '))
 print('='*60)
 print('\n\n')
 

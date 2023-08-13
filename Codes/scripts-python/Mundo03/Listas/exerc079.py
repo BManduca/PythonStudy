@@ -6,8 +6,13 @@
     EM ORDEM CRESCENTE.
 """
 
+print('\n')
+print('='*60)
+print('{:=^60}'.format(' EXERCÍCIO 79 '))
+print('='*60)
+print('\n')
+
 valores = []
-aux = 0
 
 from os import system
 import time
@@ -21,6 +26,9 @@ while True:
         print('VALOR JÁ EXISTENTE NA LISTA!')
 
     resp = str((input('Gostaria de continuar? [S/N]: ')))
+    while resp not in 'SsNn':
+        resp = str((input('\nGostaria de continuar? [S/N]: ')))
+
     print('\n')
     # system('clear')
 
