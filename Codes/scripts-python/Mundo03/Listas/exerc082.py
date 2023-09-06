@@ -3,7 +3,7 @@
     EM UMA LISTA.
 
     DEPOIS DISSO, CRIE DUAS LISTAS EXTRAS QUE VÀO CONTER
-    APENAS VALORES PARES E OS VALORS ÍMPARES DIGITADOS,
+    APENAS VALORES PARES E OS VALORES ÍMPARES DIGITADOS,
     RESPECTIVAMENTE.
 
     NO FINAL, MOSTRE O CONTEÚDO DAS TRÊS LISTAS GERADAS
@@ -20,9 +20,9 @@ listImpar = []
 
 while True:
     print()
-    val = int(input('INSIRA UM VALOR: '))
+    # val = int(input('INSIRA UM VALOR: '))
 
-    valores.append(val)
+    valores.append(int(input('INSIRA UM VALOR: ')))
 
     ans = str(input('VOCÊ GOSTARIA DE INSERIR OUTRO VALOR? [S/N]: '))
 

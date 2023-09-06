@@ -183,3 +183,29 @@ aux = ['Brunno', 'João', 'Maria', 'Felipe']
 aux[2] = 'Rodrigo'
 
 print(aux)
+
+"""
+
+- Aula 18
+
+    - criando duas listas
+        dados = []
+        pessoas = []
+        
+        dados.append('Pedro')
+        dados.append(25)
+        
+        
+        - dando append em uma estrutura
+        pessoas.append(dados[:]) -> dados[:] significa que estamos dando um fatiamento completo da estrutura
+        da lista, gerando uma lista composta, ou seja, uma lista dentro de outra lista
+        
+        - fazendo o passo acima de uma única vez:
+            pessoas = [['Pedro', 25], ['Maria', 19], ['João', 32]]
+            
+            print(pessoas[0][0]) -> Pedro
+            print(pessoas[1][1]) -> 19
+            print(pessoas[2][0]) -> João
+            print(pessoas[1]) -> ['Maria', 19]
+
+"""

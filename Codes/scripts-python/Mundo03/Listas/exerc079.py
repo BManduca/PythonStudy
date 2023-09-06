@@ -22,6 +22,7 @@ while True:
 
     if v not in valores:
         valores.append(v)
+        print('VALOR ADICIONADO A LISTA COM SUCESSO!\n')
     else:
         print('VALOR JÁ EXISTENTE NA LISTA!')
 

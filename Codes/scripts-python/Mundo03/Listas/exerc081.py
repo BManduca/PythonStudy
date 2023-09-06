@@ -16,12 +16,14 @@ print('\n')
 valores = []
 
 while True:
-    val = int(input('INSIRA UM VALOR: '))
+    # val = int(input('INSIRA UM VALOR: '))
 
-    if val not in valores:
-        valores.append(val)
-    else:
-        print('O VALOR DIGITADO, JÁ FOI INSERIDO NA LISTA!')
+    valores.append(int(input('INSIRA UM VALOR: ')))
+
+    # if val not in valores:
+    #     valores.append(val)
+    # else:
+    #     print('O VALOR DIGITADO, JÁ FOI INSERIDO NA LISTA!')
 
     ans = str(input('GOSTARIA DE INSERIR OUTRO VALOR? [S/N]: '))
 
