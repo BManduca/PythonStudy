@@ -31,8 +31,11 @@ while totalJogos <= quantJogos:
         if contador >= 6:
             break
 
+    # colocando a lista em ordem
     listaAux.sort()
+    # fazendo uma copia de listaAux para a listaMega
     listaMega.append(listaAux[:])
+    # 'limpando' o conteúdo da listaAux
     listaAux.clear()
     totalJogos += 1
 print()
@@ -42,5 +45,5 @@ for i, l in enumerate(listaMega):
     print(f' JOGO {i+1}: {l}')
     time.sleep(1)
 print('-='*7, ' < BOA SORTE! > ', '-='*7)
-# print(f'SORTEANDO {quantJogos} JOGOS')
+
 
