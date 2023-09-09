@@ -208,4 +208,62 @@ print(aux)
             print(pessoas[2][0]) -> João
             print(pessoas[1]) -> ['Maria', 19]
 
+----------------------------------------------------------------------------------------------------------
+
+ - Aula 19
+ 
+    Variáveis compostas em Python ==> Tuplas | Listas | Dicionários
+ 
+    Dicionários -> São variáveis compostas que permitem armazenar vários valores em uma mesma
+    estrutura, acessíveis por chaves literais.
+    
+    Declarações:
+        TUPLAS ==> ()
+        LISTAS ==> []
+        DICIONÁRIOS ==> {}
+        
+    
+    Declarando um dicionário:
+        
+        dados = dict()
+            ou
+        dados = {}
+        
+        Exemplo: 
+            dados = {´nome´:´Pedro´, ´idade´:25}
+            
+         => O append em dicionários não funciona
+        
+         => para inserir uma nova ´categoria´, basta fazer o seguinte:
+            dados[´sexo´] = ´M´ 
+            
+         => Eliminando elemento
+            del dados[´idade´]
+            
+            
+         ------------------------------------------------------------------
+         
+         => ARMAZENANDO INFORMAÇÕES DE FILMES
+         
+            filme = {´titulo´:´Star Wars´,
+                     ´ano´: 1977,
+                     ´diretor´:´George Lucas´
+                    }
+                    
+                => os elementos são conhecidos como chaves ou keys
+                
+            => Diferença entre Chave, valor e items
+            
+                print(filme.values()) -> irá imprimir as informações do Filme, 
+                    por exemplo: Star Wars, 1977, George Lucas
+                    
+                print(filme.keys()) -> irá imprimir as chaves do Dicionário,
+                    como por exemplo: titulo, ano e diretor
+                    
+                print(filme.items()) -> irá imprimir todas as informações, ou seja, 
+                    tanto os values e as keys juntas.
+                
+                for k, v in filme.items():
+                    print(f´O {k} é {v}´)
+            
 """
