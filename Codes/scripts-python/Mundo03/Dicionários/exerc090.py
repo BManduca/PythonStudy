@@ -16,6 +16,8 @@ relatorio['media'] = float(input(f'INSIRA A MÉDIA DO ALUNO {relatorio["nome"].u
 
 if relatorio['media'] >= 7:
     relatorio['situacao'] = 'APROVADO'
+elif relatorio['media'] >= 5 and relatorio['media'] <= 6.9:
+    relatorio['situacao'] = 'RECUPERAÇÃO'
 else:
     relatorio['situacao'] = 'REPROVADO'
 
