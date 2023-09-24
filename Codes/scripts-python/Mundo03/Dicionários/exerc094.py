@@ -21,6 +21,7 @@ pessoas = {}
 listaGeral = []
 totalIdade = 0
 resposta = 'S'
+soma = media = 0
 
 while True:
     pessoas.clear()
@@ -34,6 +35,7 @@ while True:
         print('RESPOSTA INCORRETA! FAVOR INSERIR M OU F. ')
 
     pessoas['idade'] = int(input('IDADE: '))
+    soma += pessoas['idade']
     listaGeral.append(pessoas.copy())
     print('-=' * 20)
     while True:
@@ -47,8 +49,34 @@ while True:
         break
 
 
-print(listaGeral)
+qtdPessoasCadastradas = len(listaGeral)
+media = soma / qtdPessoasCadastradas
 
+
+print('-=' * 40)
+print()
+print(f'A) TOTAL DE PESSOAS CADASTRADAS ==> {qtdPessoasCadastradas}.')
+print(f'B) MÉDIA DE IDADE DO GRUPO COMO UM TODO ==> {media:5.2f} ANOS.')
+print(f'C) LISTA DE MULHERES PRESENTE NO GRUPO: ', end='')
+print('| ', end='')
+for p in listaGeral:
+    if p['sexo'] in 'Ff':
+        print(f'{p["nome"]} | ', end='')
+print()
+print(f'D) LISTA DE PESSOAS DO GRUPO COM IDADE ACIMA DA MÉDIA: ')
+# print('| ', end='')
+print()
+print(f'{"NOME":<15}{"SEXO":^10}{"IDADE":>15}')
+for p in listaGeral:
+    if p['idade'] > media:
+        # print(f'')
+        print(f'{p["nome"]:<15}{p["sexo"]:^10}{p["idade"]:>15}')
+print()
+print('-=' * 40)
+print()
+print('<<'*15, end='')
+print(' ENCERRADO ', end='')
+print('>>'*15)
 
 #     resposta = str(input('GOSTARIA DE INSERIR OUTRO REGISTRO? [S/N]:  ')).upper()
 #     time.sleep(0.5)
