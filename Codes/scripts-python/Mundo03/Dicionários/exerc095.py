@@ -5,6 +5,7 @@
 """
 
 import time
+from os import system
 
 print()
 print('-' * 100)
@@ -28,6 +29,7 @@ while True:
     print()
     totalPartidas = int(input(f' ==> QUANTAS PARTIDAS {dadosJogador["nome"].upper()} JOGOU? '))
     print()
+    placarPartidas.clear()
     for i in range(0, totalPartidas):
         placarPartidas.append(int(input(f' ==> QUANTOS GOLS {dadosJogador["nome"].upper()} MARCOU NA {i + 1} PARTIDA? ')))
         # placarPartidas.append(int(input(f'     - QUANTIDADE DE GOLS MARCADOS NA {i+1}° PARTIDA? ')))
@@ -51,24 +53,44 @@ while True:
         else:
             print('ERRO!\nRESPONSA SOMENTE COM S OU N!')
 
+    time.sleep(1)
+    system('clear')
+
     if resp == 'N':
         break
+    time.sleep(1)
+    system('clear')
 
 print('\n\n')
 print('-' * 80)
 print('{:^80}'.format(' RELATÓRIO DO GERENCIAMENTO '))
 print('-' * 80)
 print()
-print('-'*40)
-print(f'{"     JOGADOR":<25}{"GOLS":<10}{"TOTAL":>22}')
-# print()
-# print(f'{dadosJogador["nome"]:<25}{dadosJogador["qtdGols"]}{dadosJogador["totalGols"]:>20}')
 print('-='*40)
+print('cod ', end='')
+for i in dadosJogador.keys():
+    print(f'{i:<15}', end='')
 print()
+print('-='*30)
 for i, v in enumerate(relacaoTime):
-    print(f'     {i + 1}º ==> ', end='')
+    print(f'{(i + 1):>3}º ', end='')
     for d in v.values():
         print(f'{str(d):<15}', end='')
-print()
-print('-=' * 40)
+    print()
+print('-=' * 30)
 
+while True:
+    print('\n\n')
+    busca = int(input('INSIRA UM JOGADOR PARA SER VERIFICADO\n(999 -> PARA ENCERRAR): '))
+
+    if busca == 999:
+        break
+
+    if busca >= len(relacaoTime):
+        print(f'\nERRO!! NÃO EXISTE JOGADOR COM O CÓDIGO {busca}!')
+    else:
+        print('\n')
+        print(f' -- LEVANTAMENTO DO JOGADOR {relacaoTime[busca]["nome"]}: ')
+        for i, g in  enumerate(relacaoTime[busca]['qtdGols']):
+            print(f'   No jogo {i+1} fez {g} gol(s)!')
+    print('-=' * 30)
