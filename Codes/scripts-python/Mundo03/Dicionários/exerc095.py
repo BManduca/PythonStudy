@@ -31,7 +31,8 @@ while True:
     print()
     placarPartidas.clear()
     for i in range(0, totalPartidas):
-        placarPartidas.append(int(input(f' ==> QUANTOS GOLS {dadosJogador["nome"].upper()} MARCOU NA {i + 1} PARTIDA? ')))
+        placarPartidas.append(
+            int(input(f' ==> QUANTOS GOLS {dadosJogador["nome"].upper()} MARCOU NA {i + 1} PARTIDA? ')))
         # placarPartidas.append(int(input(f'     - QUANTIDADE DE GOLS MARCADOS NA {i+1}° PARTIDA? ')))
 
     dadosJogador['qtdGols'] = placarPartidas[:]
@@ -58,20 +59,20 @@ while True:
 
     if resp == 'N':
         break
-    time.sleep(1)
-    system('clear')
+    # time.sleep(1)
+    # system('clear')
 
 print('\n\n')
 print('-' * 80)
 print('{:^80}'.format(' RELATÓRIO DO GERENCIAMENTO '))
 print('-' * 80)
 print()
-print('-='*40)
-print('cod ', end='')
+print('-=' * 30)
+print('COD ', end='')
 for i in dadosJogador.keys():
-    print(f'{i:<15}', end='')
+    print(f'{i.upper():<15}', end='')
 print()
-print('-='*30)
+print('-=' * 30)
 for i, v in enumerate(relacaoTime):
     print(f'{(i + 1):>3}º ', end='')
     for d in v.values():
@@ -81,9 +82,19 @@ print('-=' * 30)
 
 while True:
     print('\n\n')
+    print('-' * 60)
+    print()
     busca = int(input('INSIRA UM JOGADOR PARA SER VERIFICADO\n(999 -> PARA ENCERRAR): '))
 
     if busca == 999:
+        print('\n\n')
+        time.sleep(1)
+        system('clear')
+        print('-' * 60)
+        print('{:^40}'.format(' << ENCERRANDO APLICAÇÃO >> '))
+        print('{:^40}'.format(' << VOLTE SEMPRE! >> '))
+        print('-' * 60)
+
         break
 
     if busca >= len(relacaoTime):
@@ -91,6 +102,8 @@ while True:
     else:
         print('\n')
         print(f' -- LEVANTAMENTO DO JOGADOR {relacaoTime[busca]["nome"]}: ')
-        for i, g in  enumerate(relacaoTime[busca]['qtdGols']):
-            print(f'   No jogo {i+1} fez {g} gol(s)!')
-    print('-=' * 30)
+        for i, g in enumerate(relacaoTime[busca]['qtdGols']):
+            print(f'   No jogo {i + 1} fez {g} gol(s)!')
+        time.sleep(1)
+    print()
+    print('-' * 60)
