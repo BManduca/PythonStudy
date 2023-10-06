@@ -1,4 +1,4 @@
-'''
+"""
 - AULA 16
 
     - Estruturas/varíaveis compostas
@@ -161,7 +161,7 @@
 
 
 
-'''
+"""
 
 # a = (1, 5, 4)
 # b = (5, 8, 1, 2)
@@ -265,5 +265,49 @@ print(aux)
                 
                 for k, v in filme.items():
                     print(f´O {k} é {v}´)
-            
+   
+   
+   
+   
+Aula 20
+
+ - Rotina: algo que você faz com frequência (constantemente)
+ 
+ - exemplos nativos: 
+    - print()
+    - len()
+    - input()
+    - int()
+    - float()
+    
+ def mostraLinha():
+        print('-----------------------------')
+        
+mostraLinha()
+print('       SISTEMA DE ALUNOS       ')
+mostraLinha()
+mostraLinha()
+print('       CADASTRO DE FUNCIONÁRIOS       ')
+mostraLinha()
+mostraLinha()
+print('       ERRO DO SISTEMA       ')
+mostraLinha()
+
+
+
+Modularização => 
+
+Empacotamento de parâmetros => é quando precisamos passar para uma função
+um número varíavel de parâmetros, como por exemplo: contador(1,2,4,5,8,7) ou contador(1,2,4)
+no exemplo, podemos ver que a quantidade de parâmetros mudou... e para que isso funcione usamos
+a questão de empacotamento, que é a mesma coisa que dizer, olha python
+ vou passar vários parâmetros e não sei quantos são...
+ 
+ 
+ * -> simbolo de desempacotar
+ exemplo:
+
+def contador(*num):
+    
+
 """
