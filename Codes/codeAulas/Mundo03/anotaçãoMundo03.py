@@ -294,6 +294,8 @@ print('       ERRO DO SISTEMA       ')
 mostraLinha()
 
 
+Aula 20 - Funções (pt.1)
+
 
 Modularização => 
 
@@ -310,4 +312,64 @@ a questão de empacotamento, que é a mesma coisa que dizer, olha python
 def contador(*num):
     
 
+
+Aula 21 - Funções (pt.2)
+
+Interactive help => função interna que orienta ou da dicas de como utilizar
+tais comandos dentro do Python.
+
+    - help() -> função interna do python
+    
+    modo de usar:
+        - print(input.__doc__) 
+        - help(input)
+        
+        => neste caso, ambas as solicitações estarão trazendo respostas parecidas
+        
+DOCSTRINGS => String de documentação, manual de um determinado input
+
+    def contador(i,f, v):
+        cont = i
+        while c <= f:
+            print(f'{c}', end='..', flush=True)
+            c += p
+        print(' FIM!! ')
+        
+    help(contador)
+    
+    contador(2, 10, 2)
+    
+    -> se caso eu aplicar o comando help em contador, não será retornado informações 
+    que venham a me ajudar, porém, podemos utilizar as docstrings
+    
+    iniciando a implementação logo após o comando def, através da abertura e fechamento de 3 aspas duplas.
+    
+    
+Parâmetros opcionais: é quando estamos com uma função declarada e podemos passar mais ou menos parâmetros e não 
+retornará um erro.
+
+    def somar(a, b, c=0):
+        soma = a + b + c
+        print(f'    A SOMA FINAL DE {a} + {b} + {c} ==> {soma}')
+        print()
+        
+    somar(3, 4, 9)
+    somar(2, 8)
+    
+    
+    
+Escopo de varíaveis: Escopo é o local aonde vai existir e aonde ele vai deixar de existir.
+
+    - escopo global: quando a varíavel pode ser acessada em qualquer lugar do código
+    - escopo local: quando a varíavel so pode ser acessada no local que ela foi criada, por exemplo, uma função.
+
+
+Retornando valores: Funções em python, podem não retornar e imprimir dentro delas ou retornar um valor
+    
+    - palavra reservada => return
+    - funções que retornam um resultado, são bastante úteis quando precisamos personalizar a forma de mostrar 
+    a resposta.
+    
+
+    
 """
