@@ -5,25 +5,31 @@
     OBRIGATÓRIO NAS ELEIÇÕES.
 """
 
+from datetime import date
+
 
 def mostraLinha():
     print()
     print('-='*30)
 
 
-def voto(ano):
-    idade = 2023 - ano
+def voto(inputYear):
+    anoAtual = date.today().year
+
+    idade = anoAtual - inputYear
 
     if idade < 16:
-        print(f'\n   COM {idade}: VOTO NEGADO! ')
-    elif 16 < idade < 18 & idade > 70:
-        print(f'\n   COM {idade}: VOTO OPCIONAL! ')
-    elif idade >= 18:
-        print(f'\n   COM {idade}: VOTO OBRIGATÓRIO! ')
+        return f'\n   COM {idade} ANOS: VOTO NEGADO! '
+    elif 16 <= idade < 18 or idade > 70:
+        return f'\n   COM {idade} ANOS: VOTO OPCIONAL! '
+    else:
+        return f'\n   COM {idade} ANOS: VOTO OBRIGATÓRIO! '
 
 
+# programa principal
 mostraLinha()
 anoNasc = int(input('\n   INSIRA O SEU ANO DE NASCIMENTO: '))
-voto(anoNasc)
+voteANS = voto(anoNasc)
+print(voteANS)
 mostraLinha()
 print()

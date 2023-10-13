@@ -18,6 +18,13 @@ def mostraLinha2():
 
 
 def fatorial(valor, show=False):
+
+    """
+        ==> CALCULAR O FATORIAL DE UM NÚMERO E VERIFICAR SE O CÁLCULO EM SI SERÁ MOSTRADO OU NÃO
+    :param valor: O NÚMERO ESCOLHIDO PARA QUE SEJA CALCULADO O SEU FATORIAL!
+    :param show: {OPCIONAL} INFORMAÇÃO A SER RECEBIDA E VERIFICAR SE VAI MOSTRAR OU NÃO O CÁLCULO!
+    :return: O VALOR DO FATORIAL DE UM VALOR INSERIDO PELO USUÁRIO!
+    """
     nFat = 1
     print('  ==> Fatorial: ', end='')
     for contr in range(valor, 0, -1):
@@ -31,6 +38,8 @@ def fatorial(valor, show=False):
         nFat *= contr
     return nFat
 
+
+# programa principal
 
 resp = 'S'
 
@@ -78,3 +87,5 @@ sleep(1)
 print()
 print('{:^80}'.format(' << APLICAÇÃO FINALIZADA! >> \n'))
 mostraLinha()
+
+# help(fatorial)
