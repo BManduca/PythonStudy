@@ -567,3 +567,43 @@ print(f'A soma vale {}') -> é adicionado um f antes de começar a parte de stri
 print(f'A soma vale {soma}') -> assim já mostraria a resposta completa
 
 ___________________________________________________________________________________________________
+
+Aula 22 => Módulos e Pacotes
+
+ - Modularização: ato de construir módulos
+   - Surgiu no início da década de 60
+   - Sistemas estavam ficando cada vez maiores
+     - Por isso surgiu ou foi criado o termo modularização, ou seja, 
+     quebrar um programa/projeto que estava assumindo um tamanho
+     considero grandioso, em pequenas partes, para que possa ficar mais fácil
+     de entender a funcionalidade, as etapas e o que o programa vai estar 
+     resolvendo.
+   - Foco: 
+     - Dividir um programa muito grande
+     - Aumentar a legibilidade
+     - Facilitar a manutenção do sistema ou do projeto
+
+   - Vantagens:
+     - Organização do código -> ao modularizar, dividimos um problema grande, em partes menores 
+     - Facilidade na manuntenção -> Caso alguma parte do código parar de funcionar ou se for preciso
+     atualizar alguma função criada dentro do arquivo de modularização, essa ação será bem mais fácil
+     de realizar
+     - Ocultação de código detalhado -> não é necessário saber com se calcula um fatorial, só preciso
+     saber que dentro do meu arquivo de modularização, existe uma função chamada fatorial()
+     - Reutilização em outros projetos -> é só realizar a cópia do arquivo de modularização e colocar
+     na pasta do outro projeto
+
+       
+ - Pacotes: em algumas outras linguagens fica conhecido como biblioteca
+  -  Junção de vários módulos e separados por assunto, ou seja, a grosso modo, uma pasta que contém módulos 
+  - como criar um pacote em python?
+    - basta criar dentro do  projeto uma pasta com o nome determinado pelo usuário
+    - para criar os determinados módulos a serem utilizados, basta criar dentro da pasta  
+    criada acima pelo usuário, outra pasta com o nome do determinado módulo
+    - Obs.: nem sempre vai ser utilizado pacotes nos projetos, pacotes em si, são para quando 
+    os projetos ficarem muito grande
+    - Existe uma sintaxe para nome de arquivos  dentro de pacotes, inclusive um arquivo especial,
+    que podeser colocado dentro de cada pasta criada dentro do seu pacote
+      - a sintaxe é:  
+      ![img.png](img.png)
+      - 
