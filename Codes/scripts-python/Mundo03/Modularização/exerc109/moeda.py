@@ -1,44 +1,34 @@
-
-
 def imprimirLinha(mens):
     tam = len(mens) + 4
 
-    print('~'*tam)
+    print('~' * tam)
     print(f'{mens}')
-    print('~'*tam)
+    print('~' * tam)
 
 
-def aumentar(valor, percent, sit=False):
-    valor += (valor * percent) / 100
+def aumentar(valor, percent, formato=False):
+    result = valor + (valor * percent) / 100
 
-    if sit:
-        return f'R${valor:.2f}'
-    else:
-        return valor
+    return result if formato is False else typeMoeda(result)
 
 
-def diminuir(valor, percent, sit=False):
-    valor -= (valor*percent)/100
+def diminuir(valor, percent, formato=False):
+    result = valor - (valor * percent) / 100
 
-    if sit:
-        return f'R${valor:.2f}'
-    else:
-        return valor
+    return result if formato is False else typeMoeda(result)
 
 
-def dobro(valor, sit=False):
-    if sit:
-        return f'R${(valor * 2):.2f}'
-    else:
-        return valor * 2
+def dobro(valor, formato=False):
+    result = valor * 2
+
+    return result if formato is False else typeMoeda(result)
 
 
-def metade(valor, sit=False):
-    if sit:
-        return f'R${(valor / 2):.2f}'
-    else:
-        return valor / 2
+def metade(valor, formato=False):
+    result = valor / 2
+
+    return result if formato is False else typeMoeda(result)
 
 
-def moeda(valor):
-    return f'R${valor:.2f}'
+def typeMoeda(valor=0, moeda='R$'):
+    return f'{moeda}{valor:>8.2f}'.replace('.', ',')

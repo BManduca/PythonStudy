@@ -1,19 +1,15 @@
 """
-    MODIFIQUE AS FUNÇÕES QUE FORAM CRIADAS NO DESAFIO 107 PARA QUE ELAS
-    ACEITEM UM PARÂMETRO A MAIS, INFORMANDO SE O VALOR RETORNADO POR ELES
-    VAI SER OU NÃO FORMATADO PELA FUNÇÃO MOEDA(), DESENVOLVIDA NO DESAFIO 108
+    ADICIONE AO MÓDULO MOEDA.PY CRIADO NOS DESAFIOS ANTERIORES, UMA
+    FUNÇÃO CHAMADA RESUMO(),QUE MOSTRE NA TELA ALGUMAS INFOMAÇÕES GERADAS
+    PELAS FUNÇÕES QUE JÁ TEMOS NO MÓDULO CRIADO ATÉ AQUI.
 """
 
 import moeda
 
 moeda.imprimirTitulo("   << MANDUCA'S CALCULADORA >>   ")
 
-price = float(input('\n    INSIRA O PREÇO: R$ '))
+price = float(input('\n>>  INSIRA O PREÇO: R$ '))
 print()
-moeda.resumo(price, 80, 35)
-# moeda.imprimirLinha(f' A) ==> A METADE DE {moeda.moeda(price)} É {moeda.metade(price, True)}  ')
-# moeda.imprimirLinha(f' B) ==> O DOBRO DE {moeda.moeda(price)} É {moeda.dobro(price, True)}   ')
-# moeda.imprimirLinha(f' C) ==> AUMENTANDO 10%, TEMOS {moeda.aumentar(price, 10, True)}   ')
-# moeda.imprimirLinha(f' D) ==> DIMINUINDO 13%, TEMOS {moeda.diminuir(price, 13, True)}   ')
+moeda.resumo(price, 20, 12)
 moeda.imprimirTitulo('   ==> AGRADECEMOS A PREFERÊNCIA!   ')
 moeda.imprimirTitulo('   ==> VOLTE SEMPRE!   ')

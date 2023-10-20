@@ -9,18 +9,20 @@ def imprimirLinha(mens):
 
 
 def aumentar(valor, percent):
-    valor += (valor * percent) / 100
-    return valor
+    result = valor + (valor * percent) / 100
+    return result
 
 
 def diminuir(valor, percent):
-    valor -= (valor*percent)/100
-    return valor
+    result = valor - (valor*percent)/100
+    return result
 
 
 def dobro(valor):
-    return valor * 2
+    result = valor * 2
+    return result
 
 
 def metade(valor):
-    return valor/2
+    result = valor/2
+    return result
