@@ -3,20 +3,20 @@
 def imprimirTitulo(mens):
     tam = len(mens)
 
-    print('~'*tam)
-    print(f'{mens}')
-    print('~'*tam)
+    print('\033[0;36m~\033[m'*tam)
+    print(f'\033[0;36m{mens}\033[m')
+    print('\033[0;36m~\033[m'*tam)
 
 
 def imprimiLinha():
     print()
-    print('~'*55)
+    print('\033[0;32m~\033[m'*55)
     print()
 
 
 def imprimirRelacao(mens):
     tam = len(mens)
-    print(f'{mens:^{tam}}')
+    print(f'\033[0;32m{mens:^{tam}}\033[m')
 
 
 def aumentar(valor, percent, sit=False):

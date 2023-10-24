@@ -606,4 +606,65 @@ Aula 22 => Módulos e Pacotes
     que podeser colocado dentro de cada pasta criada dentro do seu pacote
       - a sintaxe é:  
       ![img.png](img.png)
-      - 
+
+___________________________________________________________________________________________________
+
+## Aula 23 - Erros, exceções e tratamentos
+
+ - ERROS ACONTECEM!
+ - Exemplo:
+   - print(x)
+     - resultaria em um erro, pois a variável x não foi inicializada
+     - Na verdade não é um erro e sim uma exceção chamada NameError
+     
+   - n = int(input('Número: '))
+     - Se um user colocar 'oito', irá gerar uma exceção, pois, o valor
+    aguardado é um numeral e não uma string
+     - E isso resultará na exceção ValueError
+     
+   - r = a / b
+     - neste caso um exemplo de exceção é a divisão por 0(no caso se 
+     b assumir um valor 0 ou for inserido via teclado)
+     - E isso resultará na exceção ZeroDivisionError
+     
+   - r = 2/'2'
+     - Resultará em um TypeError
+     - pois o segundo 2 não é um número e sim uma string
+ 
+   - lst = [3,6,4]
+     - print(lst[3])
+     - vai resultar em erro, pois a posição 3 não existe
+     - E isso resultará na exceção IndexError ou no caso 
+     dos dicionários, seria uma KeyError
+     
+   - import uteis
+     - se caso uteis não existir, vai resultar na exceção
+     ModuleNotFoundError
+   - Mais exemplos:
+     - NameError
+     - ValueError
+     - ZeroDivisionError
+     - TypeError
+     - IndexError
+     - KeyError
+     - EOFError
+     - KeyboardInterrupt
+     - OSError
+     - MemoryError
+     - ConnectionError
+     - RuntimeError
+
+    - Listagem de exceções: 
+       https://docs.python.org/3/library/exceptions.html
+
+    - estrutura try/except
+      - no try é o que geralmente pode dar problema, qual o comando ou os 
+      comandos que dariam problemas
+        - Um mesmo try pode ter vários excepts
+      - except é conhecido como a área da falha, se caso o que estiver
+      no try falhar, o que será apresentado?
+      - else é pra quando o resultado da operação no try funcionar 
+      - finally: vai acontecer independete se deu certo ou se deu errado
+      - OBS.: tanto o else quanto finally são opcionais
+      
+

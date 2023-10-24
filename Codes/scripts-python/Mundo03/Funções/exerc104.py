@@ -35,7 +35,7 @@ def leiaInt(msg):
             valor = int(n)
             ok = True
         else:
-            print('\033[0;31m ERRO!! FAVOR ISNERIR UM NÚMERO INTEIRO VÁLIDO! \033[m\n')
+            print('\033[0;31m ERRO!! FAVOR INSERIR UM NÚMERO INTEIRO VÁLIDO! \033[m\n')
         if ok:
             break
     return valor

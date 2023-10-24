@@ -10,7 +10,7 @@ from utilidadesBM import moeda
 from utilidadesBM import dados
 
 moeda.imprimirTitulo("   << MANDUCA'S CALCULADORA >>   ")
-price = dados.leiaDinheiro('\n    INSIRA O PREÇO: R$ ')
+price = dados.leiaDinheiro('\n\033[0;31m    INSIRA O PREÇO: R$ \033[m')
 print()
 moeda.resumo(price, 55, 25)
 moeda.imprimirTitulo('   ==> AGRADECEMOS A PREFERÊNCIA!   ')
