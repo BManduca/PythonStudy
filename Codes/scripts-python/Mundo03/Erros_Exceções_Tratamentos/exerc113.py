@@ -36,6 +36,7 @@ def leiaInt(msg):
             valInteiro = int(input(msg))
         except (ValueError, TypeError):
             imprimirMensagem('    ERRO! POR FAVOR, INSIRA UM INTEIRO VÁLIDO!   ', 1)
+            # joga para o while novamente
             continue
         except KeyboardInterrupt:
             imprimirMensagem('    ENTRADA DE DADOS INTERROMPIDA PELO USUÁRIO!    ', 1)

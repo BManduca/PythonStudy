@@ -3,4 +3,62 @@
     USADO.
 """
 
+import urllib.request
+from time import sleep
+
+
+colors = ('\033[0m',        # 0 - SEM CORES
+          '\003[0;31m',     # 1 - VERMELHO
+          '\033[0;32m',     # 2 - VERDE
+          '\033[0;33m',     # 3 - AMARELO
+          '\033[0;34m',     # 4 - AZUL
+          '\033[0;35m',     # 5 - ROXO
+          '\033[0;30m'      # 6 - BRANCO
+          )
+
+
+def imprimirMensagem(msg, cor=0):
+    tam = len(msg)
+    print()
+    print(colors[cor], end='')
+    print('~'*tam)
+    print(f'{msg}')
+    print('~'*tam)
+    print(colors[0], end='')
+    print()
+
+
+def testSite(urlSite):
+
+        try:
+            site = urllib.request.urlopen('http://www.ahgora.com')
+        except urllib:
+            imprimirMensagem(f'    NÃO FOI POSSÍVEL ACESSAR O LINK {urlSite} ==> {err.__cause__}    ', 1)
+            sleep(1.5)
+        except requests.ConnectionError:
+            imprimirMensagem(f'  >>    ERRO DE CONEXÃO!     <<  ', 1)
+        else:
+            imprimirMensagem(f'  >>    O LINK {urlSite} ESTÁ ONLINE, PODE ACESSAR!    <<  ', 2)
+
+        # try:
+        #     urlReq = requests.get(urlSite, timeout=3)
+        #     urlReq.raise_for_status()
+        # except requests.exceptions.HTTPError as errHttp:
+        #     imprimirMensagem(f'  >>    HTTP ERROR ==> {errHttp}    <<  ', 1)
+        # except requests.exceptions.ConnectionError as errCon:
+        #     imprimirMensagem(f'  >>    CONNECTION ERROR ==> {errCon}    <<  ', 1)
+        # except requests.exceptions.Timeout as errTime:
+        #     imprimirMensagem(f'  >>    TIMEOUT ERROR ==> {errTime}    <<  ', 1)
+        # except requests.exceptions.RequestException as err:
+        #     imprimirMensagem(f'  >>    {err}    <<  ', 1)
+        # else:
+        #     imprimirMensagem(f'  >>    O LINK {urlSite} ESTÁ ONLINE, PODE ACESSAR!    <<  ', 2)
+
+
+# PROGRAMA PRINCIPAL
+
+# url = str(input('INSIRA A URL PARA VERIFICAÇÃO: '))
+url = "https://www.rockeseat.com/"
+# url = 'http://www.google.com/blahblah'
+testSite(url)
 
