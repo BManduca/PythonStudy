@@ -17,7 +17,38 @@
 
 """
 
+colors = ('\033[0m',  # 0 - SEM CORES
+          '\003[0;31m',  # 1 - VERMELHO
+          '\033[0;32m',  # 2 - VERDE
+          '\033[0;33m',  # 3 - AMARELO
+          '\033[0;34m',  # 4 - AZUL
+          '\033[0;35m',  # 5 - ROXO
+          '\033[0;30m'  # 6 - BRANCO
+          )
 
 
+def imprimirMensagem(msg, cor=0):
+    tam = len(msg)
+    print()
+    print(colors[cor], end='')
+    print('-'*tam)
+    print(f'{msg}')
+    print('-' * tam)
+    print(colors[0], end='')
+    print()
 
+
+def cadastrar():
+    print()
+
+
+def listar():
+    print()
+
+
+def menu():
+    print()
+
+
+# PROGRAMA PRINCIPAL
 
