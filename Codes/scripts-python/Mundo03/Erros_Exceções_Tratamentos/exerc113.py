@@ -60,7 +60,7 @@ def leiaFloat(msg):
             imprimirMensagem('    ERRO! POR FAVOR, INSIRA UM FLOAT VÁLIDO!    ', 1)
             continue
         except KeyboardInterrupt:
-            imprimirMensagem('    ENTRADA DE DADOS INTERROMPIDA PELO USUÁRIO!    ', 2)
+            imprimirMensagem('    ENTRADA DE DADOS INTERROMPIDA PELO USUÁRIO!    ', 1)
             return 0
         else:
             return valFloat

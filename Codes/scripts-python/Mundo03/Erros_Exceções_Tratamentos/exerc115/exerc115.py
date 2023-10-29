@@ -16,7 +16,8 @@
     '+' ==> ATUALIZAR. TANTO LEITURA QUANTO ESCRITA
 
 """
-
+from time import sleep
+from os import system
 from lib.interface import *
 
 
@@ -30,9 +31,14 @@ while True:
         print('Opção 1')
     elif resp == 2:
         print('Opção 2')
+        sleep(1.5)
+        system('clear')
     elif resp == 3:
-        print('SAINDO DO SISTEMA.... ATÉ LOGO!')
+        txtExit = 'SAINDO DO SISTEMA.... ATÉ LOGO!'
+        imprimirMensagem(f'{txtExit:^50}', 5)
         break
     else:
         txterror = 'ERRO! INSIRA UMA OPÇÃO VALÍDA!'
-        printTitles(f'{txterror:^50}', 1)
+        imprimirMensagem(f'{txterror:^50}', 1)
+        sleep(1.5)
+        system('clear')
