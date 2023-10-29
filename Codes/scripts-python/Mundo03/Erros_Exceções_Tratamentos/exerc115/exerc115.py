@@ -42,3 +42,4 @@ while True:
         imprimirMensagem(f'{txterror:^50}', 1)
         sleep(1.5)
         system('clear')
+
