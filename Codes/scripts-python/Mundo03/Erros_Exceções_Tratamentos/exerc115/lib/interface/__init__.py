@@ -1,4 +1,5 @@
 from time import sleep
+from os import system
 
 
 colors = ('\033[0m',  # 0 - SEM CORES
@@ -13,7 +14,7 @@ colors = ('\033[0m',  # 0 - SEM CORES
 
 def imprimirLinha(tam=50, cor=0):
     print(colors[cor], end='')
-    print('-' * tam)
+    print('~' * tam)
     print(colors[0], end='')
 
 
@@ -28,8 +29,8 @@ def imprimirMensagem(msg, cor=0):
     print()
 
 
-def cabecalho(txt):
-    imprimirMensagem(f'{txt:^50}', 4)
+def cabecalho(txt, cor=0):
+    imprimirMensagem(f'{txt:^50}', cor)
 
 
 def leiaInt(msg):
@@ -45,7 +46,7 @@ def leiaInt(msg):
         except (ValueError, TypeError):
             msgerro1 = 'ERRO! POR FAVOR, INSIRA UM INTEIRO VÁLIDO!'
             imprimirMensagem(f'{msgerro1:^50}', 1)
-            sleep(1.5)
+            sleep(2.5)
             # joga para o while novamente
             continue
         except KeyboardInterrupt:
@@ -59,14 +60,13 @@ def leiaInt(msg):
 
 def menu(lista, cor=0):
     txt = 'MENU PRINCIPAL'
-    imprimirMensagem(f'{txt:^50}', 2)
+    imprimirMensagem(f'{txt:^50}', cor)
     cont = 1
     for i in lista:
-        print(colors[cor], end='')
-        print(f'{cont} - {i}')
-        print(colors[0], end='')
+        print(f'\033[35m{cont}\033[m - \033[32m{i}\033[m')
         cont += 1
+    print()
     imprimirLinha(50, 2)
     print()
-    opcuser = leiaInt('INSIRA UMA OPÇÃO: ')
+    opcuser = leiaInt('\033[32mINSIRA UMA OPÇÃO: \033[m')
     return opcuser

@@ -16,30 +16,45 @@
     '+' ==> ATUALIZAR. TANTO LEITURA QUANTO ESCRITA
 
 """
-from time import sleep
+
 from os import system
+from time import sleep
 from lib.interface import *
+from lib.arquivo import *
 
 
 # PROGRAMA PRINCIPAL
-cabecalho('SISTEMA MANDUCA v1.0')
+cabecalho('SISTEMA MANDUCA v1.0', 4)
 
 while True:
-    resp = menu(['CADASTRAR NOVO COLABORADOR', 'LISTAR COLABORADORES', 'SAIR DO SISTEMA'], 2)
+    resp = menu(['CRIAR ARQUIVO DE DADOS', 'CADASTRAR NOVO COLABORADOR', 'LISTAR COLABORADORES', 'SAIR DO SISTEMA'], 2)
+    print()
+    sleep(1.5)
 
     if resp == 1:
-        print('Opção 1')
+        archive = 'colabListManduca.txt'
+
+        if not archiveExist(archive):
+            createArchive(archive)
+
+        sleep(4)
+        system('clear')
     elif resp == 2:
-        print('Opção 2')
-        sleep(1.5)
+        cabecalho('Opção 2', 1)
+        sleep(3)
         system('clear')
     elif resp == 3:
+        cabecalho('Opção 3', 3)
+        sleep(3)
+        system('clear')
+    elif resp == 4:
         txtExit = 'SAINDO DO SISTEMA.... ATÉ LOGO!'
-        imprimirMensagem(f'{txtExit:^50}', 5)
+        cabecalho(f'{txtExit:^50}', 5)
+        sleep(1.5)
         break
     else:
         txterror = 'ERRO! INSIRA UMA OPÇÃO VALÍDA!'
-        imprimirMensagem(f'{txterror:^50}', 1)
-        sleep(1.5)
+        cabecalho(f'{txterror:^50}', 1)
+        sleep(2.5)
         system('clear')
 
