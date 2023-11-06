@@ -36,10 +36,15 @@ while True:
 
         if not archiveExist(archive):
             createArchive(archive)
+        else:
+            msg = f'ARQUIVO {archive.upper()} JÁ FOI CRIADO COM SUCESSO!'
+            imprimirMensagem(f'{msg:^60}', 2)
 
         sleep(4)
         system('clear')
     elif resp == 2:
+        # OPÇÃO DE LISTAR O CONTEÚDO DO ARQUIVO
+        readArchive(archive)
         cabecalho('Opção 2', 1)
         sleep(3)
         system('clear')
@@ -49,12 +54,12 @@ while True:
         system('clear')
     elif resp == 4:
         txtExit = 'SAINDO DO SISTEMA.... ATÉ LOGO!'
-        cabecalho(f'{txtExit:^50}', 5)
+        cabecalho(f'{txtExit:^60}', 5)
         sleep(1.5)
         break
     else:
         txterror = 'ERRO! INSIRA UMA OPÇÃO VALÍDA!'
-        cabecalho(f'{txterror:^50}', 1)
+        cabecalho(f'{txterror:^60}', 1)
         sleep(2.5)
         system('clear')
 

@@ -1,3 +1,5 @@
+
+
 colors = ('\033[0m',  # 0 - SEM CORES
           '\033[0;31m',  # 1 - VERMELHO
           '\033[0;32m',  # 2 - VERDE
@@ -12,9 +14,9 @@ def imprimirMensagem(msg, cor=0):
     tam = len(msg)
     print()
     print(colors[cor], end='')
-    print('~' * 50)
-    print(f'{msg:^50}')
-    print('~' * 50)
+    print('~' * 60)
+    print(f'{msg:^60}')
+    print('~' * 60)
     print(colors[0], end='')
     print()
 
@@ -46,3 +48,12 @@ def createArchive(archiveName):
         msg = f'ARQUIVO {archiveName.upper()} CRIADO COM SUCESSO!'
         imprimirMensagem(msg, 2)
 
+
+def readArchive(archiveName):
+
+    try:
+        archive = open(archiveName, 'rt')
+    except:
+        msgErro = 'HOUVE UM ERRO AO LER O ARQUIVO!'
+        imprimirMensagem(msgErro, 1)
+    else:
