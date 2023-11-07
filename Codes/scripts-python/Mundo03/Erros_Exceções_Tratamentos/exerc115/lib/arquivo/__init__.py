@@ -1,4 +1,14 @@
 
+"""
+
+    readlines() => pega as linhas do arquivo e joga dentro de uma lista
+    read() => le o arquivo inteiro e a ideia é extrair as informações e
+    jogar em algum variável ou dispô-las na tela
+
+"""
+
+
+from lib.interface import *
 
 colors = ('\033[0m',  # 0 - SEM CORES
           '\033[0;31m',  # 1 - VERMELHO
@@ -11,7 +21,6 @@ colors = ('\033[0m',  # 0 - SEM CORES
 
 
 def imprimirMensagem(msg, cor=0):
-    tam = len(msg)
     print()
     print(colors[cor], end='')
     print('~' * 60)
@@ -57,3 +66,31 @@ def readArchive(archiveName):
         msgErro = 'HOUVE UM ERRO AO LER O ARQUIVO!'
         imprimirMensagem(msgErro, 1)
     else:
+        msgRegister = 'PESSOAS CADASTRADAS'
+        imprimirMensagem(msgRegister, 4)
+        for linha in archive:
+            dados = linha.split(';')
+            dados[1] = dados[1].replace('\n', '')
+            print(f'{dados[0]:<30}{dados[1]:>20} anos')
+        print(archive.read())
+    finally:
+        archive.close()
+
+
+def registerCollaborator(archiveName, nomeColab='desconhecido', idadeColab=0):
+    try:
+        archive = open(archiveName, 'at')
+    except:
+        imprimirMensagem('HOUVE UM ERRO NA ABERTURA DO ARQUIVO!', 1)
+    else:
+        try:
+            archive.write(f'{nomeColab};{idadeColab}\n')
+        except:
+            imprimirMensagem('HOUVE UM ERRO NA HORA DE ESCREVER O REGISTRO!', 2)
+        else:
+            msgNewRegister = f'NOVO REGISTRO DE {nomeColab.upper()} ADICIONADO COM SUCESSO!'
+            # print(f'\n{msgNewRegister:^60}\n')
+            imprimirMensagem(msgNewRegister, 2)
+            archive.close()
+
+

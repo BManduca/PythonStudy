@@ -1,6 +1,4 @@
 from time import sleep
-from os import system
-
 
 colors = ('\033[0m',  # 0 - SEM CORES
           '\033[0;31m',  # 1 - VERMELHO

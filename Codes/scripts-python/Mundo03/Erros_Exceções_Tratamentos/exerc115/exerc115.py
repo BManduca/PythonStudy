@@ -31,8 +31,9 @@ while True:
     print()
     sleep(1.5)
 
+    archive = 'colabListManduca.txt'
+
     if resp == 1:
-        archive = 'colabListManduca.txt'
 
         if not archiveExist(archive):
             createArchive(archive)
@@ -43,14 +44,16 @@ while True:
         sleep(4)
         system('clear')
     elif resp == 2:
-        # OPÇÃO DE LISTAR O CONTEÚDO DO ARQUIVO
-        readArchive(archive)
-        cabecalho('Opção 2', 1)
+        imprimirMensagem('NOVO CADASTRO', 4)
+        nome = str(input('NOME: '))
+        idade = leiaInt('IDADE: ')
+        registerCollaborator(archive, nome, idade)
         sleep(3)
         system('clear')
     elif resp == 3:
-        cabecalho('Opção 3', 3)
-        sleep(3)
+        # OPÇÃO DE LISTAR O CONTEÚDO DO ARQUIVO
+        readArchive(archive)
+        sleep(8)
         system('clear')
     elif resp == 4:
         txtExit = 'SAINDO DO SISTEMA.... ATÉ LOGO!'
