@@ -145,3 +145,67 @@ ________________________________________________________________________________
         - Mesmo parâmetro.
         - Cada classe terá o seu método independente.
 ___________________________________________________________________________________________________
+ ## História da Programação orientada a Objetos
+
+  - O termo Programação Orientada a objetos foi criado por Alan Kay, autor 
+  da linguagem de programação Smalltalk
+
+  
+  - Paradigmas de Programação
+    - Programação estruturada
+    - Programação imperativa
+    - Programação procedural
+    - Programação Orientada a Objetos
+
+
+  - Cada forma, produto que será criado ou que será desenvolvido,
+  vai exigir um tipo de programação, que visa a performance, 
+  que visa o melhor uso dos componentes da máquina que esta sendo utilizada
+  ou ainda se for em nuvem
+
+
+  - Linguagens modernas que utilizam POO
+    - Python
+    - Java
+    - C++
+    - C#
+    - Ruby
+  
+
+  - Idéias base da POO
+    - a POO foi criada para tentar aproximar o mundo real do mundo virtual.
+    - Na POO o programador é responsável por moldar o mundo dos objetos e 
+    explicar para estes objetos como eles devem interagir entre si.
+      - Basicamente neste curso será focado em criar objetos utilizando
+      a linguagem Python e através de seus atríbutos e métodos, iremos 
+      'dizer' como que estes irão se comportar, o que eles vão executar e
+      quem por exemplo, poderá executar as mesmas funções se criarmos
+      criarmos objetos diferentes.
+___________________________________________________________________________________________________
+
+### Atributos:
+  - São características que as classes recebem na suas construções
+
+
+### Métodos
+  - São ações que essas classes executam
+
+
+### Demonstração de Classes
+![Exemplo de criação de uma classe](images/example_class.png)
+
+
+- self  
+    - é um parâmetro que faz referência ao próprio objeto que chama o método
+    - sempre que usamos o self, quer dizer que são características relacionadas a ele mesmo
+
+- __init__ => método relacionado ao constructor
+    - em python é obrigatório criar esse constructor de maneira explícita
+    - o init significa dizer que estaremos utilizando a estrutura presente dentro da definicao,
+    para que possamos criar as nossas classes
+    - Todos os objetos que serão criados terão que respeitar
+    aquilo que o constructor passa na estrutura presente dentro dele
+
+___________________________________________________________________________________________________
+
+
