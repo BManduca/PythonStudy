@@ -208,4 +208,13 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________
 
+### Encapsulamento
+
+- Termo utilizado para esconder alguns atríbutos ou até mesmo métodos, 
+para que não sejam acessadas por outras classe ou até mesmo outros usuários
+
+
+- No python não existe nível de acesso para as varíaveis, como 
+protect, private ou public
+
 
