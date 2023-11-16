@@ -217,4 +217,12 @@ para que não sejam acessadas por outras classe ou até mesmo outros usuários
 - No python não existe nível de acesso para as varíaveis, como 
 protect, private ou public
 
+___________________________________________________________________________________________________
 
+### Herança
+
+- Através da herança, podemos criar classes herdadas de 
+outras classes
+
+
+- 
