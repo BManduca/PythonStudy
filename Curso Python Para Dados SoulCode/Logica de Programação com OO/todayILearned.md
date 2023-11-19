@@ -232,3 +232,14 @@ ________________________________________________________________________________
 - Através da associação podemos criar um vínculo entre 2 classes
 
 ___________________________________________________________________________________________________
+
+### Composição
+
+- É também quando existe uma relação de uma classe com outra, porém,
+é um pouco diferente de associação..
+- Quando excluímos outra classe que está utilizando determinada
+situação de outra classe, a mesma então desaparece
+- É quando um objeto "possui" (ou faz parte de) outro objeto.
+
+
+___________________________________________________________________________________________________
