@@ -243,3 +243,27 @@ situação de outra classe, a mesma então desaparece
 
 
 ___________________________________________________________________________________________________
+
+### Classes Abstratas
+
+- Classe abstrata é uma classe que vai servir de modelo para 
+outras classes
+- O diferencial é que ela não vai ser instanciada
+  - ela não pode ser instanciada diretamente
+  - Para resolver isso, é preciso criar outras classes, 
+  que vão herdar características dessa classe
+  - pode ser utilizado vários métodos dentro desta classe
+
+___________________________________________________________________________________________________
+
+### Polimorfismo
+
+- É uma propriedade da POO
+- Em python só existe um tipo de polimorfismo
+  - Sopreposição
+  - É quando algumas classes que são derivadas
+  de outras classes e elas podem utilizar o mesmo
+  método da classe Pai, mas fazendo uma assinatura
+  diferente ou se comportando de maneira diferente
+
+___________________________________________________________________________________________________
