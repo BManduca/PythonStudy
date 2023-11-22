@@ -267,3 +267,10 @@ ________________________________________________________________________________
   diferente ou se comportando de maneira diferente
 
 ___________________________________________________________________________________________________
+
+### Módulos e Pacotes
+
+- Módulos: Estruturas que importamos para criar e utilizar ferramentas
+que não existem nativamente no python
+
+___________________________________________________________________________________________________
