@@ -29,13 +29,20 @@ db = pymysql.connect(host='localhost',
 
 # variável de instanciamento do nosso banco de dados
 cursor = db.cursor()
-# cursor.execute('CREATE DATABASE mydatabase')
-# imprimirLinha(4)
-# imprimirMensagem('DATABASE CRIADA COM SUCESSO!', 2)
-# imprimirLinha(4)
 
-# cursor.execute("CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))")
-# imprimirLinha(4)
-# imprimirMensagem('TABELA CRIADA COM SUCESSO!', 2)
-# imprimirLinha(4)
+# sql = "SELECT * FROM customers WHERE address = 'Florianópolis, SC'"
 
+sql = "SELECT * FROM customers WHERE address LIKE '%RJ%'"
+
+cursor.execute(sql)
+
+# como supostamente a consulta pode trazer 0, 1 ou vários registros, é indicado usar o
+# fetchall()
+myresult = cursor.fetchall()
+
+imprimirLinha(4)
+for i in myresult:
+    print(colors[2], end='')
+    print(i)
+    print(colors[0], end='')
+imprimirLinha(4)

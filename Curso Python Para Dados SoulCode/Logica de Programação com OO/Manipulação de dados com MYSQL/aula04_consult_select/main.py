@@ -29,13 +29,14 @@ db = pymysql.connect(host='localhost',
 
 # variável de instanciamento do nosso banco de dados
 cursor = db.cursor()
-# cursor.execute('CREATE DATABASE mydatabase')
-# imprimirLinha(4)
-# imprimirMensagem('DATABASE CRIADA COM SUCESSO!', 2)
-# imprimirLinha(4)
+cursor.execute("SELECT * FROM customers")
+myresult = cursor.fetchone()
+imprimirLinha(4)
+print(myresult)
+imprimirLinha(4)
 
-# cursor.execute("CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))")
-# imprimirLinha(4)
-# imprimirMensagem('TABELA CRIADA COM SUCESSO!', 2)
-# imprimirLinha(4)
-
+myresult2 = cursor.fetchall()
+imprimirLinha(4)
+for i in myresult2:
+    print(i)
+imprimirLinha(4)
