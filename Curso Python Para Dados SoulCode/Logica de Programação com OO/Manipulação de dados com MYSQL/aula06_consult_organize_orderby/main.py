@@ -30,29 +30,14 @@ db = pymysql.connect(host='localhost',
 # variável de instanciamento do nosso banco de dados
 cursor = db.cursor()
 
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-# val = ("Brunno", "Florianópolis, SC")
+# sql = "SELECT name FROM customers ORDER BY name"
+sql = "SELECT name FROM customers WHERE name LIKE '%K%' ORDER BY name"
 
-# val = [
-#     ("José", "Rio de Janeiro, RJ"),
-#     ("Cleide", "Balneário Camboriú, SC"),
-#     ("Kamilla", "Florianópolis, SC"),
-#     ("Murilo", "Florianópolis, SC")
-# ]
+cursor.execute(sql)
 
-val = [
-    ("Caio", "Cuiabá, MT"),
-    ("Keila", "Porto Alegre, RS"),
-    ("Charles", "São Paulo, SP")
-]
-
-# executando comando de insert com o data presente em val
-# cursor.execute(sql, val)
-cursor.executemany(sql, val)
-
-# necessário para que o database seja modificado
-db.commit()
+myresult = cursor.fetchall()
 
 imprimirLinha(4)
-imprimirMensagem(f'{cursor.rowcount} linha(s) alterada(s)', 2)
+for i in myresult:
+    print(i)
 imprimirLinha(4)

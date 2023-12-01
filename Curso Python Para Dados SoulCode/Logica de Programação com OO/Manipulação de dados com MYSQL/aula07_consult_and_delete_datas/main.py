@@ -30,29 +30,14 @@ db = pymysql.connect(host='localhost',
 # variável de instanciamento do nosso banco de dados
 cursor = db.cursor()
 
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-# val = ("Brunno", "Florianópolis, SC")
+sql = "DELETE FROM customers WHERE address = 'São Paulo, SP'"
 
-# val = [
-#     ("José", "Rio de Janeiro, RJ"),
-#     ("Cleide", "Balneário Camboriú, SC"),
-#     ("Kamilla", "Florianópolis, SC"),
-#     ("Murilo", "Florianópolis, SC")
-# ]
+cursor.execute(sql)
 
-val = [
-    ("Caio", "Cuiabá, MT"),
-    ("Keila", "Porto Alegre, RS"),
-    ("Charles", "São Paulo, SP")
-]
+myresult = cursor.fetchall()
 
-# executando comando de insert com o data presente em val
-# cursor.execute(sql, val)
-cursor.executemany(sql, val)
-
-# necessário para que o database seja modificado
 db.commit()
 
-imprimirLinha(4)
-imprimirMensagem(f'{cursor.rowcount} linha(s) alterada(s)', 2)
-imprimirLinha(4)
+imprimirLinha(1)
+imprimirMensagem(f'{cursor.rowcount} linha(s) deletada(s).', 1)
+imprimirLinha(1)
