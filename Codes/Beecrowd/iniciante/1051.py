@@ -43,5 +43,9 @@ elif 2000.00 < salario <= 3000.00:
     impRenda = (salario - 2000.00) * 0.08
     print('R$ %.2f' % impRenda)
 elif 3000 < salario <= 4500:
-
+    impRenda = ((salario - 3000) * 0.18) + (1000 * 0.08)
+    print('R$ %.2f' % impRenda)
 else:
+    impRenda = ((salario - 4500) * 0.28) + (1500 * 0.18) + (1000 * 0.08)
+    print('R$ %.2f' % impRenda)
+
