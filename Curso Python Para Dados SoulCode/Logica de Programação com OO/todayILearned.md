@@ -280,3 +280,51 @@ ________________________________________________________________________________
 - apt install python3-(nome_do_modulo)
 
 ___________________________________________________________________________________________________
+
+## MÓDULO DE MANIPULAÇÃO DE DADOS
+
+### Realizando criação de database
+
+- CREATE DATABASE (nome_da_tabela)
+
+### Realizando criação de tabelas
+
+- CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))
+
+### Inserindo dados na tabela criada
+
+- INSERT INTO customers (name, address) VALUES (%s, %s)
+
+
+- realizando conexao com o banco
+- db = pymysql.connect(host='localhost', user='Manduca', password='h3H@rSAuDK)@!Eu_', database='mydatabase')
+
+
+- variável de instanciamento do nosso banco de dados
+  - cursor = db.cursor()
+
+
+- executando para adicionar somente uma linha
+  - val = ("Brunno", "Florianópolis, SC")
+  - cursor.execute(sql, val)
+  - db.commit()
+
+
+- executando para adicionar várias linhas
+  - val = [ ("Caio", "Cuiabá, MT"), ("Keila", "Porto Alegre, RS"), ("Charles", "São Paulo, SP") ]
+  - cursor.execute(sql, val)
+  - cursor.executemany(sql, val)
+  - db.commit() -> comando efetuado para que o db seja modificado
+
+    
+
+### Realizando comando para deletar dados
+
+- DELETE FROM customers WHERE address = 'São Paulo, SP'
+- cursor.execute(sql)
+- myresult = cursor.fetchall()
+- db.commit()
+
+
+
+___________________________________________________________________________________________________
