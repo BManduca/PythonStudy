@@ -37,21 +37,21 @@ def insert_data_table():
 
     sql = "INSERT INTO alunos (nome, matricula, turma) VALUES (%s, %s, %s)"
 
-    val = ("José Vinícius", "MAT90556", "BCW25")
+    # val = ("José Vinícius", "MAT90556", "BCW25")
 
-    # val = [
-    #     ("José Lima", "MAT90551", "BCW22"),
-    #     ("Carlos Augusto", "MAT90551", "BCW22"),
-    #     ("Lívia Lima", "MAT90552", "BCW22"),
-    #     ("Sandra Gomes", "MAT90553", "BCW23"),
-    #     ("João Augusto", "MAT90554", "BCW23"),
-    #     ("Breno Lima", "MAT90555", "BCW24"),
-    #     ("José Vinícius", "MAT90556", "BCW25")
-    # ]
+    val = [
+        ("José Lima", "MAT90551", "BCW22"),
+        ("Carlos Augusto", "MAT90552", "BCW22"),
+        ("Lívia Lima", "MAT90553", "BCW22"),
+        ("Sandra Gomes", "MAT90554", "BCW23"),
+        ("João Augusto", "MAT90555", "BCW23"),
+        ("Breno Lima", "MAT90556", "BCW24"),
+        ("José Vinícius", "MAT90557", "BCW25")
+    ]
 
     # executando comando de insert com o data presente em val
-    cursor.execute(sql, val)
-    # cursor.executemany(sql, val)
+    # cursor.execute(sql, val)
+    cursor.executemany(sql, val)
 
     # necessário para que o database seja modificado
     db.commit()

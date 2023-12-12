@@ -18,7 +18,7 @@ def imprimirMensagem(msg, cor=0):
 
 def imprimirLinha(cor=0):
     print(colors[cor], end='')
-    print('-=-'*20)
+    print('-=-' * 20)
     print(colors[0], end='')
 
 
@@ -46,25 +46,29 @@ Faça as seguintes consultas:
 
 """
 
-# sql = "SELECT * FROM alunos"
-# sql = "SELECT nome, matricula FROM alunos WHERE turma LIKE '%BCW23%'"
-# sql = "SELECT nome FROM alunos where nome LIKE '%Lima%'"
-# sql = "UPDATE alunos SET turma = 'BCW25' WHERE nome = 'Carlos Augusto'"
-sql = "DELETE FROM alunos WHERE nome = 'José Vinícius'"
 
-cursor.execute(sql)
+def execute_data():
+    # sql = "SELECT * FROM alunos"
+    # sql = "SELECT nome, matricula FROM alunos WHERE turma LIKE '%BCW23%'"
+    # sql = "SELECT nome FROM alunos where nome LIKE '%Lima%'"
+    # sql = "UPDATE alunos SET turma = 'BCW25' WHERE matricula = 'MAT90552'"
+    sql = "DELETE FROM alunos WHERE matricula = 'MAT90557'"
 
-db.commit()
+    cursor.execute(sql)
 
-res = cursor.fetchall()
+    db.commit()
 
-# imprimirLinha(2)
-# for x in res:
-#     print(x)
-# imprimirLinha(2)
+    # res = cursor.fetchall()
 
-imprimirLinha(1)
-# imprimirMensagem(f'{cursor.rowcount} linha(s) atualizada(s)!', 2)
-imprimirMensagem(f'{cursor.rowcount} linha(s) deletada(s)!', 1)
-imprimirLinha(1)
+    # imprimirLinha(2)
+    # for x in res:
+    #     print(x)
+    # imprimirLinha(2)
 
+    imprimirLinha(1)
+    # imprimirMensagem(f'{cursor.rowcount} linha(s) atualizada(s)!', 2)
+    imprimirMensagem(f'{cursor.rowcount} linha(s) deletada(s)!', 1)
+    imprimirLinha(1)
+
+
+execute_data()
