@@ -28,7 +28,7 @@ def imprimirLinha(cor=0):
 
 db = pymysql.connect(host='localhost',
                      user='Manduca',
-                     password='h3H@rSAuDK)@!Eu_',
+                     password='Uy)+bV##<GYmf2$l',
                      database='sistema_escolar_soul_on')
 
 

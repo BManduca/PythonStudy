@@ -24,7 +24,7 @@ def imprimirLinha(cor=0):
 
 db = pymysql.connect(host='localhost',
                      user='Manduca',
-                     password='h3H@rSAuDK)@!Eu_',
+                     password='Uy)+bV##<GYmf2$l',
                      database='sistema_escolar_soul_on')
 
 # variável de instanciamento do nosso banco de dados
@@ -59,7 +59,7 @@ def execute_data():
     db.commit()
 
     # res = cursor.fetchall()
-
+    #
     # imprimirLinha(2)
     # for x in res:
     #     print(x)

@@ -1,5 +1,5 @@
 """
-    - Crie uma base de dados chamada sistema_escolar_soul_on
+    - Crie uma tabela alunos com os campos id, nome, matricula, turma.
 """
 
 import pymysql
@@ -26,24 +26,23 @@ def imprimirLinha(cor=0):
     print(colors[0], end='')
 
 
-def create_database():
-    db = pymysql.connect(
-        host='localhost',
-        user='Manduca',
-        password='h3H@rSAuDK)@!Eu_'
-    )
+db = pymysql.connect(host='localhost',
+                     user='Manduca',
+                     password='Uy)+bV##<GYmf2$l',
+                     database='sistema_escolar_soul_on')
 
+
+def create_table():
     # variável de instanciamento do nosso banco de dados
     cursor = db.cursor()
 
-    sql = 'CREATE DATABASE sistema_escolar_soul_on'
+    sql = 'CREATE TABLE alunos (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(255), matricula VARCHAR(255), turma VARCHAR(255))'
 
     cursor.execute(sql)
 
     imprimirLinha(2)
-    imprimirMensagem('DATABASE CRIADA COM SUCESSO!', 2)
+    imprimirMensagem('TABELA CRIADA COM SUCESSO!', 2)
     imprimirLinha(2)
 
 
-# chamada função
-create_database()
+create_table()

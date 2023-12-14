@@ -1,4 +1,25 @@
- ## Lógica de Programação com Orientação a Objetos
+## Comandos
+
+- verificar versão do python
+  - python3 --version
+
+
+- install pip
+  - sudo apt install python3-pip -y
+
+
+- Autalizando o pip 
+  - sudo -H pip3 install --upgrade pip
+
+
+- PIP – Instalar pacotes Python
+  - pip3 install (nome_do_pacote)
+
+
+
+___________________________________________________________________________________________________ 
+
+## Lógica de Programação com Orientação a Objetos
  
 - Programação estruturada vs. Programação Orientada a Objetos 
   - programação estruturada
