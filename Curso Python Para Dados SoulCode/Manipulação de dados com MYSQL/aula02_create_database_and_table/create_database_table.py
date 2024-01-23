@@ -22,10 +22,18 @@ def imprimirLinha(cor=0):
     print(colors[0], end='')
 
 
-db = pymysql.connect(host='localhost',
-                     user='Manduca',
-                     password='h3H@rSAuDK)@!Eu_',
-                     database='mydatabase')
+# db = pymysql.connect(
+#     host='localhost',
+#     user='Manduca',
+#     password='h3H@rSAuDK)@!Eu_'
+# )
+
+db = pymysql.connect(
+    host='localhost',
+    user='Manduca',
+    password='h3H@rSAuDK)@!Eu_',
+    database='mydatabase'
+)
 
 # variável de instanciamento do nosso banco de dados
 cursor = db.cursor()
@@ -38,4 +46,16 @@ cursor = db.cursor()
 # imprimirLinha(4)
 # imprimirMensagem('TABELA CRIADA COM SUCESSO!', 2)
 # imprimirLinha(4)
+
+cursor.execute(
+    "SELECT * FROM `customers`"
+)
+
+result = cursor.fetchall()
+print()
+imprimirLinha(4)
+for i in result:
+    print(i)
+imprimirLinha(4)
+print()
 

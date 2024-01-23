@@ -5,10 +5,10 @@ import pymysql
 #                      passwd="GukgV4Au9d2pN4H6t",
 #                      database="mydatabase")
 
-db = pymysql.connect(host="34.168.200.39",
-                     user="root",
-                     passwd="root",
-                     database="library")
+db = pymysql.connect(host="212.1.211.51",
+                     user="u948493795_rootx",
+                     passwd="Soulcodeacademy1#",
+                     database="u948493795_library")
 
 
 # variável de instanciamento do nosso banco de dados

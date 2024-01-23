@@ -31,8 +31,8 @@ db = pymysql.connect(host='localhost',
 cursor = db.cursor()
 
 sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-# val = ("Brunno", "Florianópolis, SC")
-val = ("Charles", "São Paulo, SP")
+val = ("Brunno", "Florianópolis, SC")
+# val = ("Charles", "São Paulo, SP")
 
 # val = [
 #     ("José", "Rio de Janeiro, RJ"),
