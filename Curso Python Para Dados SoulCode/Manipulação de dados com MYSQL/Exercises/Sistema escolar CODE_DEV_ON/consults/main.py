@@ -24,8 +24,8 @@ def imprimirLinha(cor=0):
 
 db = pymysql.connect(host='localhost',
                      user='Manduca',
-                     password='Uy)+bV##<GYmf2$l',
-                     database='sistema_escolar_soul_on')
+                     password='h3H@rSAuDK)@!Eu_',
+                     database='code_dev_on_new_system_db')
 
 # variável de instanciamento do nosso banco de dados
 cursor = db.cursor()
@@ -48,27 +48,27 @@ Faça as seguintes consultas:
 
 
 def execute_data():
-    # sql = "SELECT * FROM alunos"
+    sql = "SELECT * FROM alunos"
     # sql = "SELECT nome, matricula FROM alunos WHERE turma LIKE '%BCW23%'"
     # sql = "SELECT nome FROM alunos where nome LIKE '%Lima%'"
     # sql = "UPDATE alunos SET turma = 'BCW25' WHERE matricula = 'MAT90552'"
-    sql = "DELETE FROM alunos WHERE matricula = 'MAT90557'"
+    # sql = "DELETE FROM alunos WHERE matricula = 'MAT90557'"
 
     cursor.execute(sql)
 
-    db.commit()
+    # db.commit()
 
-    # res = cursor.fetchall()
-    #
-    # imprimirLinha(2)
-    # for x in res:
-    #     print(x)
-    # imprimirLinha(2)
+    res = cursor.fetchall()
+    
+    imprimirLinha(2)
+    for x in res:
+        print(x)
+    imprimirLinha(2)
 
-    imprimirLinha(1)
+    # imprimirLinha(1)
     # imprimirMensagem(f'{cursor.rowcount} linha(s) atualizada(s)!', 2)
-    imprimirMensagem(f'{cursor.rowcount} linha(s) deletada(s)!', 1)
-    imprimirLinha(1)
+    # imprimirMensagem(f'{cursor.rowcount} linha(s) deletada(s)!', 1)
+    # imprimirLinha(1)
 
 
 execute_data()

@@ -32,7 +32,8 @@ cursor = db.cursor()
 
 # sql = "SELECT * FROM customers WHERE address = 'Florianópolis, SC'"
 
-sql = "SELECT * FROM customers WHERE address LIKE '%RJ%'"
+# com os # a busca é realizada uma busca em qualquer lugar do texto com foco no que o usuario colocar
+sql = "SELECT * FROM customers WHERE address LIKE '%SC%'"
 
 cursor.execute(sql)
 

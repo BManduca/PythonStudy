@@ -28,8 +28,8 @@ def imprimirLinha(cor=0):
 
 db = pymysql.connect(host='localhost',
                      user='Manduca',
-                     password='Uy)+bV##<GYmf2$l',
-                     database='sistema_escolar_soul_on')
+                     password='h3H@rSAuDK)@!Eu_',
+                     database='code_dev_on_new_system_db')
 
 
 def insert_data_table():

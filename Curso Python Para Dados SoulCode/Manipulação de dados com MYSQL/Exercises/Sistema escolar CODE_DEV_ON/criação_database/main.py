@@ -30,13 +30,13 @@ def create_database():
     db = pymysql.connect(
         host='localhost',
         user='Manduca',
-        password='Uy)+bV##<GYmf2$l'
+        password='h3H@rSAuDK)@!Eu_'
     )
 
     # variável de instanciamento do nosso banco de dados
     cursor = db.cursor()
 
-    sql = 'CREATE DATABASE sistema_escolar_soul_on'
+    sql = 'CREATE DATABASE code_dev_on_new_system_db'
 
     cursor.execute(sql)
 

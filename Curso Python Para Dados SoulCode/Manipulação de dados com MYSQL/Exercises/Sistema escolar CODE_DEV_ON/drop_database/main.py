@@ -1,7 +1,3 @@
-"""
-    - Crie uma tabela alunos com os campos id, nome, matricula, turma.
-"""
-
 import pymysql
 
 colors = ('\033[0m',  # 0 - SEM CORES
@@ -22,27 +18,20 @@ def imprimirMensagem(msg, cor=0):
 
 def imprimirLinha(cor=0):
     print(colors[cor], end='')
-    print('-=-' * 20)
+    print('-=-'*20)
     print(colors[0], end='')
 
 
 db = pymysql.connect(host='localhost',
                      user='Manduca',
-                     password='Uy)+bV##<GYmf2$l',
+                     password='h3H@rSAuDK)@!Eu_',
                      database='sistema_escolar_soul_on')
 
+cursor = db.cursor()
+sql = "DROP DATABASE sistema_escolar_soul_on"
 
-def create_table():
-    # variável de instanciamento do nosso banco de dados
-    cursor = db.cursor()
+cursor.execute(sql)
 
-    sql = 'CREATE TABLE alunos (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(255), matricula VARCHAR(255), turma VARCHAR(255))'
-
-    cursor.execute(sql)
-
-    imprimirLinha(2)
-    imprimirMensagem('TABELA CRIADA COM SUCESSO!', 2)
-    imprimirLinha(2)
-
-
-create_table()
+imprimirLinha(1)
+imprimirMensagem('BASE EXCLUÍDA COM SUCESSO!', 1)
+imprimirLinha(1)

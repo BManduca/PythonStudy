@@ -22,10 +22,12 @@ def imprimirLinha(cor=0):
     print(colors[0], end='')
 
 
+# realizando uma conexao remota
 # db = pymysql.connect(
-#     host='localhost',
-#     user='Manduca',
-#     password='h3H@rSAuDK)@!Eu_'
+#     host='212.1.211.51', => para se conectar com uma base remota
+#     user='Manduca', => o usuário
+#     password='h3H@rSAuDK)@!Eu_', => senha
+#     db = 'nome_library_database' => nome do banco para fazer a conexao
 # )
 
 db = pymysql.connect(
@@ -51,7 +53,11 @@ cursor.execute(
     "SELECT * FROM `customers`"
 )
 
+numrows = int(cursor.rowcount)
 result = cursor.fetchall()
+imprimirLinha(4)
+print()
+imprimirMensagem(f'Número total de registros encontrados: {numrows}', 4)
 print()
 imprimirLinha(4)
 for i in result:
