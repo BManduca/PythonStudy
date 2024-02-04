@@ -19,7 +19,7 @@
 
 - ## Acessando Banco de Dados MongoDB com Python
     - ### Estrutura do Mongodb - Aula 24
-        - O Mongodb é contruído por uma base de dados
+        - O Mongodb é construído por uma base de dados
         - Essa base de dados vai ter coleções
             - São unidades básicas de dados. 
             - Formatados como Binary JSON
@@ -28,5 +28,15 @@
         - Os documentos são inseridos por nós usuários.
 
 
-- ## Coleções - Aula 25
-    - 
+- ## Exercício de Treino
+  - criar uma base de dados MongoDB contendo as seguintes coleções: 
+    - Livros (20 documentos)
+    - Revistas (15 documentos)
+    - Jornais (15 documentos)
+    - Mangás (10 documentos)
+
+  - Obs.: 
+    - todos os documentos devem ter pelo menos 4 campos
+    - alguns documentos devem ter mais ou menos campos que os demais
+    - deverá haver _id do tipo Object e declarado pelo usuário
+    - devem haver campos dos tipos: Int, Double, String e ObjectId
