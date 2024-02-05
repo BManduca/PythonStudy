@@ -40,3 +40,14 @@
     - alguns documentos devem ter mais ou menos campos que os demais
     - deverá haver _id do tipo Object e declarado pelo usuário
     - devem haver campos dos tipos: Int, Double, String e ObjectId
+
+- ## Lista de dados - Parte 1
+    - Funções MongoDB
+        - Procedimento para realizar consultas dentro do MongoDB: find()
+        - Para realizar uma pesquisa é so usar o find seguido de um parâmentro, como por exemplo: 
+            - detalhes_itens = collection_name.find({"categoria":"Físico"})
+        - Pesquisas podem ser realziadas usando de maneira tradicional, com valores lógicos e também com base em Regex.
+            - Exemplos:
+                - collection_name.find({"categoria":"Físico"}) -> maneira tradicional
+                - collection_name.find({"$or": [{"desconto_maximo":"22%"},{"desconto_maximo":"35%"}]}) -> operadores lógicos
+                - collection_name.find({"nome_item": {"$regex":"^Ca"}}) -> uso do Regex
