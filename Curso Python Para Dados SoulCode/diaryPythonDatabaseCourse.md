@@ -46,8 +46,14 @@
         - Procedimento para realizar consultas dentro do MongoDB: find()
         - Para realizar uma pesquisa é so usar o find seguido de um parâmentro, como por exemplo: 
             - detalhes_itens = collection_name.find({"categoria":"Físico"})
-        - Pesquisas podem ser realziadas usando de maneira tradicional, com valores lógicos e também com base em Regex.
+        - Pesquisas podem ser realizadas usando de maneira tradicional, com valores lógicos e também com base em Regex.
             - Exemplos:
                 - collection_name.find({"categoria":"Físico"}) -> maneira tradicional
                 - collection_name.find({"$or": [{"desconto_maximo":"22%"},{"desconto_maximo":"35%"}]}) -> operadores lógicos
                 - collection_name.find({"nome_item": {"$regex":"^Ca"}}) -> uso do Regex
+
+- ## Listagem de dados - pt. 1 (4:18)
+  - find() -> responsável por exibir dados no MongoDB
+    - podemos também filtrar usando o find e passando um parâmetro específico, para reduzir mais o retorno da busca.
+      > 
+        find("categoria":"Online")

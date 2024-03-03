@@ -32,7 +32,7 @@ def get_database():
     imprimirMensagem('CONECTADO COM SUCESSO!', 2)
     imprimirLinha(2)
 
-    return client['bookstoreMand']
+    return client['mandDatabase']
 
 dbname = get_database()
 collection_magazines = dbname['revistas']
