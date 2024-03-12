@@ -15,9 +15,14 @@ def imprimirMensagem(msg, cor=0):
     print(f'{msg:^60}')
     print(colors[0], end='')
 
-def imprimirLinha(cor=0):
+def imprimirLinha20(cor=0):
     print(colors[cor], end='')
     print('-=-'*20)
+    print(colors[0], end='')
+
+def imprimirLinha(cor=0):
+    print(colors[cor], end='')
+    print('-=-'*5)
     print(colors[0], end='')
 
 
@@ -30,9 +35,9 @@ def get_database():
     # aqui acontece a nossa conexao com o mongodb
     client = MongoClient(CONNECTION_STRING)
 
-    imprimirLinha(2)
+    imprimirLinha20(2)
     imprimirMensagem('Conectado com sucesso!', 2)
-    imprimirLinha(2)
+    imprimirLinha20(2)
 
     return client['mandDatabase']
 
@@ -40,36 +45,24 @@ def get_database():
 dbname = get_database()
 collection_name = dbname["itens_mandDatabase"]
 
-#somente aplicando find sem parâmetro algum
-# detalhes_items = collection_name.find()
 
-# consulta aplicando parâmetro de filtro para um elemento especifico
-# detalhes_items = collection_name.find({
-#     "categoria":"Físico"
-# })
+# para atualizar utilizamos a palavra reservada set, que faz o update das informações
+# collection_name.update_many(
+#     {"desconto_maximo":"50%"},
+#     {"$set":{"desconto_maximo":"55%"}}
+# )
 
+# na seguinte forma 
+collection_name.update_one(
+    {"nome_item":{"$regex":"Drone"}}, {"$set":{"desconto_maximo":"100%"}}
+)
 
-# fazendo consulta passando parâmetro baseado em um operador lógico or 
-# detalhes_items = collection_name.find({
-#     "$or" : [
-#         {"desconto_maximo":"15%"},
-#         {"desconto_maximo":"35%"}
-#     ]
-# })
+imprimirLinha20(4)
+imprimirMensagem("Dados atualizados com sucesso!", 4)
+imprimirLinha20(4)
 
+detalhes_items = collection_name.find()
 
-# fazendo consulta passando parâmetro baseado em um operador lógico and
-# detalhes_items = collection_name.find({
-#     "$and" : [
-#         {"categoria":"Físico"},
-#         {"desconto_maximo":"35%"}
-#     ]
-# })
-
-# consultas aplicando parâmetro através de Regex
-detalhes_items = collection_name.find({
-    "nome_item":{"$regex":"^Ca"}
-})
-
+print()
 for item in detalhes_items:
     print(item)

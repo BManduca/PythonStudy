@@ -15,9 +15,14 @@ def imprimirMensagem(msg, cor=0):
     print(f'{msg:^60}')
     print(colors[0], end='')
 
-def imprimirLinha(cor=0):
+def imprimirLinha20(cor=0):
     print(colors[cor], end='')
     print('-=-'*20)
+    print(colors[0], end='')
+
+def imprimirLinha(cor=0):
+    print(colors[cor], end='')
+    print('-=-'*5)
     print(colors[0], end='')
 
 
@@ -30,9 +35,9 @@ def get_database():
     # aqui acontece a nossa conexao com o mongodb
     client = MongoClient(CONNECTION_STRING)
 
-    imprimirLinha(2)
+    imprimirLinha20(2)
     imprimirMensagem('Conectado com sucesso!', 2)
-    imprimirLinha(2)
+    imprimirLinha20(2)
 
     return client['mandDatabase']
 
@@ -40,36 +45,21 @@ def get_database():
 dbname = get_database()
 collection_name = dbname["itens_mandDatabase"]
 
-#somente aplicando find sem parâmetro algum
+# distinct -> exibe os dados sem repetição
+# detalhes_items = collection_name.distinct("nome_item")
+
+#limit -> limita a quantidade de dados a serem mostrados
+# detalhes_items = collection_name.find({'categoria':'Físico'}).limit(2)
+
+#skip -> 'pular'a quantidade de itens definido pelo usuario e mostrar somente os itens resultantes dessa ação em tela
+detalhes_items = collection_name.find({}, {"nome_item", "desconto_maximo"}).skip(2)
+
 # detalhes_items = collection_name.find()
 
-# consulta aplicando parâmetro de filtro para um elemento especifico
-# detalhes_items = collection_name.find({
-#     "categoria":"Físico"
-# })
-
-
-# fazendo consulta passando parâmetro baseado em um operador lógico or 
-# detalhes_items = collection_name.find({
-#     "$or" : [
-#         {"desconto_maximo":"15%"},
-#         {"desconto_maximo":"35%"}
-#     ]
-# })
-
-
-# fazendo consulta passando parâmetro baseado em um operador lógico and
-# detalhes_items = collection_name.find({
-#     "$and" : [
-#         {"categoria":"Físico"},
-#         {"desconto_maximo":"35%"}
-#     ]
-# })
-
-# consultas aplicando parâmetro através de Regex
-detalhes_items = collection_name.find({
-    "nome_item":{"$regex":"^Ca"}
-})
-
+print(' ')
+# imprimirLinha(3)
 for item in detalhes_items:
+    # print(f'{item:^16}')
     print(item)
+# imprimirLinha(3)
+print(' ')

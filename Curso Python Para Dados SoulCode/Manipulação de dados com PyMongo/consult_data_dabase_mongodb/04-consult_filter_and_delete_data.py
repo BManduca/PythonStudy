@@ -15,9 +15,14 @@ def imprimirMensagem(msg, cor=0):
     print(f'{msg:^60}')
     print(colors[0], end='')
 
-def imprimirLinha(cor=0):
+def imprimirLinha20(cor=0):
     print(colors[cor], end='')
     print('-=-'*20)
+    print(colors[0], end='')
+
+def imprimirLinha(cor=0):
+    print(colors[cor], end='')
+    print('-=-'*5)
     print(colors[0], end='')
 
 
@@ -30,46 +35,27 @@ def get_database():
     # aqui acontece a nossa conexao com o mongodb
     client = MongoClient(CONNECTION_STRING)
 
-    imprimirLinha(2)
+    imprimirLinha20(2)
     imprimirMensagem('Conectado com sucesso!', 2)
-    imprimirLinha(2)
+    imprimirLinha20(2)
 
     return client['mandDatabase']
 
 
 dbname = get_database()
 collection_name = dbname["itens_mandDatabase"]
-
-#somente aplicando find sem parâmetro algum
 # detalhes_items = collection_name.find()
+# collection_name.delete_one({"_id":"SC001"})
 
-# consulta aplicando parâmetro de filtro para um elemento especifico
-# detalhes_items = collection_name.find({
-#     "categoria":"Físico"
-# })
+collection_name.drop()
 
+print()
 
-# fazendo consulta passando parâmetro baseado em um operador lógico or 
-# detalhes_items = collection_name.find({
-#     "$or" : [
-#         {"desconto_maximo":"15%"},
-#         {"desconto_maximo":"35%"}
-#     ]
-# })
+imprimirLinha20(1)
+imprimirMensagem('Dados deletados com sucesso!', 1)
+imprimirLinha20(1)
 
-
-# fazendo consulta passando parâmetro baseado em um operador lógico and
-# detalhes_items = collection_name.find({
-#     "$and" : [
-#         {"categoria":"Físico"},
-#         {"desconto_maximo":"35%"}
-#     ]
-# })
-
-# consultas aplicando parâmetro através de Regex
-detalhes_items = collection_name.find({
-    "nome_item":{"$regex":"^Ca"}
-})
-
-for item in detalhes_items:
+detalhes_itens = collection_name.find()
+print()
+for item in detalhes_itens:
     print(item)

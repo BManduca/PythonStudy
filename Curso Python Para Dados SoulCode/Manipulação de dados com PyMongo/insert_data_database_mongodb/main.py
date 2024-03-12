@@ -88,8 +88,8 @@ item_5 = {
 #     item_3
 # ])
 
-collection_name.insert_one(item_4)
-collection_name.insert_one(item_5)
+collection_name.insert_one(item_1)
+# collection_name.insert_one(item_5)
 
 imprimirLinha(2)
 imprimirMensagem('Dados inseridos com sucesso!', 2)
