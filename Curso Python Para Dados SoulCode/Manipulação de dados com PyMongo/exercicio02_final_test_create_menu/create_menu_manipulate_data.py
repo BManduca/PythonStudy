@@ -1,4 +1,6 @@
 from pymongo import collection
+import time
+from os import system
 
 colors = (
     '\033[0m', # 0 - SEM COR
@@ -37,20 +39,25 @@ def get_database():
 
     client = MongoClient(CONNECTION_STRING)
 
+    print(' ')
     imprimirLinha20(2)
     imprimirMsgEstilizada('CONECTADO AO BANCO COM SUCESSO!',2)
     imprimirLinha20(2)
+    print(' ')
+    time.sleep(2)
+    system('clear')
 
     return client['exerciseDatabase']
 
 def exibir_menu():
-    imprimirLinha20(4)
-    imprimirMsgEstilizada('BEM-VINDO AO PROGRAMA DE MANIPULAÇÃO DE DADOS!', 4)
-    imprimirMsgEstilizada('SELECIONE UMA OPÇÃO: ', 4)
+    imprimirLinha20(3)
+    imprimirMsgEstilizada('BEM-VINDO AO PROGRAMA DE MANIPULAÇÃO DE DADOS!', 3)
+    imprimirMsgEstilizada('SELECIONE UMA OPÇÃO: ', 3)
     print(' ')
-    imprimirMsgEstilizada('1 => CADASTRO DE DOCUMENTO')
-    imprimirMsgEstilizada('0 => FINALIZAR PROGRAMA')
-    imprimirLinha20(4)
+    imprimirMsgEstilizada('1 => CADASTRO DE DOCUMENTO', 3)
+    imprimirMsgEstilizada('2 => MOSTRAR TODOS OS DOCUMENTOS', 3)
+    imprimirMsgEstilizada('0 => FINALIZAR PROGRAMA', 3)
+    imprimirLinha20(3)
     # imprimirMsgEstilizada('2 => ')
     # imprimirMsgEstilizada('3 => ')
 
@@ -60,15 +67,35 @@ def cadastrarDocumento():
     qtd = int(input('ENTRE COM A QUANTIDADE DE CAMPOS QUE O DOCUMENTO TERÁ: '))
     dct = dict(input('DIGITE A CHAVE E O VALOR SEPARADO POR ESPAÇOS: ').split() for _ in range(qtd))
 
-    print()
-    print(dct)
+    print(' ')
+    imprimirLinha20(2)
+    imprimirMsgEstilizada(f'{dct}',2)
+    imprimirLinha20(2)
     collection_name.insert_one(dct)
 
-    print()
+    print(' ')
     imprimirLinha20(2)
     imprimirMsgEstilizada('DADOS CADASTRADOS COM SUCESSO!', 2)
     imprimirLinha20(2)
-    print()
+    print(' ')
+    time.sleep(5)
+    system('clear')
+
+def mostrarDocumentos():
+    dbname = get_database()
+    collection_name = dbname['exerciseListDatabase']
+    detalhes_items = collection_name.find()
+    print(' ')
+
+    imprimirLinha20()
+    for item in detalhes_items:
+        imprimirMsgEstilizada(f'{item}')
+    imprimirLinha20()
+    print(' ')
+
+    time.sleep(8)
+    system('clear')
+
 
 
 
@@ -80,6 +107,8 @@ def main():
 
         if theChoice == '1':
             cadastrarDocumento()
+        elif theChoice == '2':
+            mostrarDocumentos()
         elif theChoice == '0':
             print('\n')
             imprimirLinha20(1)
