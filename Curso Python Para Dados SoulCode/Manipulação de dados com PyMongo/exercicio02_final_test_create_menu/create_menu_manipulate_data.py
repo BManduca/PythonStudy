@@ -82,6 +82,7 @@ def showMenu():
     printTextCentralized('2 => MOSTRAR TODOS OS DOCUMENTOS', 80, 3)
     printTextCentralized('3 => DELETAR UM DOCUMENTO ATRAVÉS DO ID', 80, 3)
     printTextCentralized('4 => DELETAR TODA A COLEÇÃO DO BANCO DE DADOS', 80, 3)
+    printTextCentralized('5 => ATUALIZAR CAMPOS DO(S) DOCUMENTO(S) DO BANCO DE DADOS', 80, 3)
     printTextCentralized('0 => FINALIZAR PROGRAMA', 80, 3)
     imprimirLinha28(3)
 
@@ -176,6 +177,7 @@ def deleteAllCollectionDB():
         system('clear')        
     else:
         collection_name.drop()
+        dbname.drop_collection()
         printTextCentralized('DELETANDO COLEÇÃO...')
         print()
         printTextCentralized('3', 80, 2)
@@ -186,6 +188,39 @@ def deleteAllCollectionDB():
         time.sleep(2)
         printTextCentralized('COLEÇÃO DELETADA COM SUCESSO!', 80, 2)
 
+
+def updateDocuments():
+    dbname = get_database()
+    collection_name = dbname['exerciseListDatabase']
+    
+    printTextCentralized('MENU DE ATUALIZAÇÃO\n1 - ATUALIZAR DOCUMENTO POR ID: \n2 - ATUALIZAR DOCUMENTO POR CAMPO: ', 80, 3)
+    
+    optionUser = str(input('INSIRA A OPÇÃO QUE GOSTARIA DE REALIZAR: '))
+    time.sleep(3)
+    system('clear')
+    
+    while optionUser not in '12':
+        printTextCentralized('MENU DE ATUALIZAÇÃO\n1 - ATUALIZAR DOCUMENTO POR ID: \n2 - ATUALIZAR DOCUMENTO POR CAMPO: ', 80, 3)
+        optionUser = str(input('INSIRA A OPÇÃO QUE GOSTARIA DE REALIZAR: '))
+    print(' ')
+    
+    if optionUser == '1':
+        changeID = str(input('INSIRA O ID DO DOCUMENTO A SER ALTERADO: '))
+        key = str(input('INSIRA O CAMPO A SER ALTERADO: '))
+        value = str(input('INSIRA O NOVO VALOR DO CAMPO: '))
+        
+        collection_name.update_one({"_id":changeID}, {"$set":{key:value}})
+        
+        printTextCentralized('ATUALIZAÇÃO REALIZADA COM SUCESSO!', 80, 2)
+    elif optionUser == '2':
+        keySearch = str(input('INSIRA O CAMPO A SER ANALISADO: '))
+        valueSearch = str(input('INSIRA O VALOR DO CAMPO A SER ANALISADO: '))
+        print('')
+        keyChange = str(input('INSIRA O CAMPO A SER ALTERADO:'))
+        valueChange = str(input('INSIRA O NOVO VALOR: '))
+        
+        collection_name.update_many({keySearch:valueSearch}, {"$set":{keyChange, valueChange}})
+        
 
 def main():
     while True:
@@ -204,6 +239,8 @@ def main():
             deleteDocumentForID()
         elif theChoice == '4':
             deleteAllCollectionDB()
+        elif theChoice == '5':
+            updateDocuments()
         elif theChoice == '0':
             print('\n')
             imprimirLinha28(1)
