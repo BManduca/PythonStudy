@@ -59,9 +59,9 @@ def get_database():
     imprimirLinha28(2)
     printTextCentralized('EFETUANDO CONEXÃO COM O BANCO...', 84, 2)
     time.sleep(2)
-    printTextCentralized('>>>>', 84, 2)
+    printTextCentralized('>>>>>', 84, 2)
     time.sleep(2)
-    printTextCentralized('>>', 84, 2)
+    printTextCentralized('>>>', 84, 2)
     time.sleep(2)
     printTextCentralized('>', 84, 2)
     time.sleep(2)
@@ -193,25 +193,33 @@ def updateDocuments():
     dbname = get_database()
     collection_name = dbname['exerciseListDatabase']
     
-    printTextCentralized('MENU DE ATUALIZAÇÃO\n1 - ATUALIZAR DOCUMENTO POR ID: \n2 - ATUALIZAR DOCUMENTO POR CAMPO: ', 80, 3)
-    
+    printTextCentralized('MENU DE ATUALIZAÇÃO\n1 - ATUALIZAR DOCUMENTO POR ID \n2 - ATUALIZAR DOCUMENTO POR CAMPO ', 80, 3)
+    print(' ')
     optionUser = str(input('INSIRA A OPÇÃO QUE GOSTARIA DE REALIZAR: '))
     time.sleep(3)
     system('clear')
     
     while optionUser not in '12':
-        printTextCentralized('MENU DE ATUALIZAÇÃO\n1 - ATUALIZAR DOCUMENTO POR ID: \n2 - ATUALIZAR DOCUMENTO POR CAMPO: ', 80, 3)
+        printTextCentralized('MENU DE ATUALIZAÇÃO\n1 - ATUALIZAR DOCUMENTO POR ID\n2 - ATUALIZAR DOCUMENTO POR CAMPO', 80, 3)
+        print(' ')
         optionUser = str(input('INSIRA A OPÇÃO QUE GOSTARIA DE REALIZAR: '))
     print(' ')
     
     if optionUser == '1':
         changeID = str(input('INSIRA O ID DO DOCUMENTO A SER ALTERADO: '))
+        print(' ')
         key = str(input('INSIRA O CAMPO A SER ALTERADO: '))
         value = str(input('INSIRA O NOVO VALOR DO CAMPO: '))
         
         collection_name.update_one({"_id":changeID}, {"$set":{key:value}})
         
+        print(' ')
+        imprimirLinha28(2)
         printTextCentralized('ATUALIZAÇÃO REALIZADA COM SUCESSO!', 80, 2)
+        imprimirLinha28(2)
+        print(' ')
+        time.sleep(3)
+        system('clear')
     elif optionUser == '2':
         keySearch = str(input('INSIRA O CAMPO A SER ANALISADO: '))
         valueSearch = str(input('INSIRA O VALOR DO CAMPO A SER ANALISADO: '))
